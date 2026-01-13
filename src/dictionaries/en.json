@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "title": "SwiftBuild - Websites, SEO, Google Ads",
+    "description": "Modern websites, SEO optimization and Google Ads campaigns. One team, one goal. Free quote."
+  },
+  "nav": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline_1": "WEBSITE,",
+    "headline_2": "SEO AND ADS.",
+    "subheadline": "One team, one goal.",
+    "cta_primary": "Get a free quote",
+    "cta_secondary": "View portfolio",
+    "scroll": "Scroll"
+  },
+  "problem": {
+    "title": "Sound familiar?",
+    "points": [
+      "Your website looks like it's from 2015",
+      "The ad agency blames the website. The web agency blames the ads.",
+      "You pay for \"marketing\" but don't know what exactly",
+      "You want to change something on the site and wait 2 weeks"
+    ],
+    "solution_title": "We do it differently.",
+    "solution_text": "One company. Website, SEO and ads. If something doesn't work — it's our problem, not yours."
+  },
+  "services": {
+    "title": "What we do",
+    "subtitle": "We focus on three things — and do them well.",
+    "website": {
+      "title": "Websites",
+      "description": "Modern, fast websites that sell",
+      "features": [
+        "Custom design",
+        "Mobile responsive",
+        "Fast loading",
+        "SEO ready"
+      ],
+      "price": "from 8,000 PLN",
+      "timeline": "2-3 weeks"
+    },
+    "seo": {
+      "title": "SEO",
+      "description": "Be visible on Google for your customers",
+      "features": [
+        "Technical audit",
+        "Keyword research",
+        "On-page optimization",
+        "Monthly reports"
+      ],
+      "price": "from 1,500 PLN/month",
+      "timeline": "Results in 3-6 months"
+    },
+    "ads": {
+      "title": "Google Ads",
+      "description": "Ads that bring real results",
+      "features": [
+        "Campaign strategy",
+        "Ad copywriting",
+        "A/B testing",
+        "Monthly optimization"
+      ],
+      "price": "from 1,000 PLN/month + budget",
+      "timeline": "Launch in 1 week"
+    },
+    "cta": "Learn more"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Projects we're proud of",
+    "view_project": "View project",
+    "view_all": "View all projects",
+    "back": "All projects",
+    "next_project": "Next project",
+    "about_project": "About the project",
+    "what_we_did": "What we did",
+    "visit_site": "Visit site"
+  },
+  "process": {
+    "title": "How we work",
+    "step1": {
+      "title": "Conversation",
+      "description": "Tell us about your business. We'll understand your goals and prepare a quote."
+    },
+    "step2": {
+      "title": "Execution",
+      "description": "We design and build the site. You approve, we deploy. Done in 2-3 weeks."
+    },
+    "step3": {
+      "title": "Results",
+      "description": "We launch SEO and ads. We monitor, optimize, and report."
+    }
+  },
+  "cta": {
+    "title": "Ready for a modern website?",
+    "button": "Let's talk"
+  },
+  "about": {
+    "title": "About us",
+    "intro": "We are Wouter and Karol.",
+    "description": "We build websites that work. We're not a big agency with a conference room and account manager. We're two people who get things done.",
+    "contact_line": "You call — Karol answers. Something breaks — Wouter fixes it. No passing between departments. No waiting for \"team response\".",
+    "karol": {
+      "role": "Your contact",
+      "bio": "Business Analyst at Colliers. Will understand your business and take care of every detail."
+    },
+    "wouter": {
+      "role": "Builds",
+      "bio": "Senior developer with experience in e-commerce, AI and web applications. Your site in good hands."
+    },
+    "why_us": {
+      "title": "Why us?",
+      "point1": {
+        "title": "Everything in one place",
+        "description": "Website, SEO, ads. No unnecessary middlemen."
+      },
+      "point2": {
+        "title": "Fast and concrete",
+        "description": "Done in 2-3 weeks, not 3 months."
+      },
+      "point3": {
+        "title": "Talk to people, not a company",
+        "description": "You know us by name, we know your business."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's talk",
+    "subtitle": "We'll respond within 24 hours.",
+    "form": {
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Thanks! We'll get back to you faster than you think.",
+      "error": "Something went wrong. Please try again."
+    },
+    "or": "Or book a call",
+    "book_call": "Book a time"
+  },
+  "footer": {
+    "tagline": "Website, SEO and ads. One team, one goal.",
+    "privacy": "Privacy policy",
+    "rights": "All rights reserved"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "title": "SwiftBuild - Strony internetowe, SEO, Google Ads",
+    "description": "Nowoczesne strony internetowe, pozycjonowanie SEO i kampanie Google Ads. Jedna firma, jeden cel. Bezpłatna wycena."
+  },
+  "nav": {
+    "services": "Usługi",
+    "portfolio": "Realizacje",
+    "about": "O nas",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "headline_1": "STRONA,",
+    "headline_2": "SEO I REKLAMY.",
+    "subheadline": "Jedna firma, jeden cel.",
+    "cta_primary": "Bezpłatna wycena",
+    "cta_secondary": "Zobacz realizacje",
+    "scroll": "Przewiń"
+  },
+  "problem": {
+    "title": "Brzmi znajomo?",
+    "points": [
+      "Twoja strona wygląda jakby była z 2015 roku",
+      "Agencja od reklam mówi, że to wina strony. Twórca strony mówi, że to wina reklam.",
+      "Płacisz za \"marketing\" ale nie wiesz za co dokładnie",
+      "Chcesz zmienić coś na stronie i czekasz 2 tygodnie"
+    ],
+    "solution_title": "Robimy to inaczej.",
+    "solution_text": "Jedna firma. Strona, SEO i reklamy. Jeśli coś nie działa — to nasz problem, nie Twój."
+  },
+  "services": {
+    "title": "Co robimy",
+    "subtitle": "Skupiamy się na trzech rzeczach — i robimy je dobrze.",
+    "website": {
+      "title": "Strony internetowe",
+      "description": "Nowoczesne, szybkie strony które sprzedają",
+      "features": [
+        "Indywidualny design",
+        "Responsywność mobilna",
+        "Szybkie ładowanie",
+        "Gotowe pod SEO"
+      ],
+      "price": "od 8 000 PLN",
+      "timeline": "2-3 tygodnie"
+    },
+    "seo": {
+      "title": "Pozycjonowanie SEO",
+      "description": "Bądź widoczny w Google dla swoich klientów",
+      "features": [
+        "Audyt techniczny",
+        "Badanie słów kluczowych",
+        "Optymalizacja on-page",
+        "Miesięczne raporty"
+      ],
+      "price": "od 1 500 PLN / mies.",
+      "timeline": "Wyniki w 3-6 miesięcy"
+    },
+    "ads": {
+      "title": "Google Ads",
+      "description": "Reklamy które przynoszą konkretne wyniki",
+      "features": [
+        "Strategia kampanii",
+        "Copywriting reklam",
+        "Testy A/B",
+        "Miesięczna optymalizacja"
+      ],
+      "price": "od 1 000 PLN / mies. + budżet",
+      "timeline": "Start w 1 tydzień"
+    },
+    "cta": "Poznaj szczegóły"
+  },
+  "portfolio": {
+    "title": "Realizacje",
+    "subtitle": "Projekty, z których jesteśmy dumni",
+    "view_project": "Zobacz projekt",
+    "view_all": "Zobacz wszystkie realizacje",
+    "back": "Wszystkie realizacje",
+    "next_project": "Następny projekt",
+    "about_project": "O projekcie",
+    "what_we_did": "Co zrobiliśmy",
+    "visit_site": "Odwiedź stronę"
+  },
+  "process": {
+    "title": "Jak działamy",
+    "step1": {
+      "title": "Rozmowa",
+      "description": "Opowiedz nam o swoim biznesie. Zrozumiemy cele i przygotujemy wycenę."
+    },
+    "step2": {
+      "title": "Realizacja",
+      "description": "Projektujemy i budujemy stronę. Ty akceptujesz, my wdrażamy. Gotowe w 2-3 tygodnie."
+    },
+    "step3": {
+      "title": "Wyniki",
+      "description": "Uruchamiamy SEO i reklamy. Monitorujemy, optymalizujemy, raportujemy."
+    }
+  },
+  "cta": {
+    "title": "Gotowy na nowoczesną stronę?",
+    "button": "Porozmawiajmy"
+  },
+  "about": {
+    "title": "O nas",
+    "intro": "Jesteśmy Wouter i Karol.",
+    "description": "Budujemy strony internetowe, które działają. Nie jesteśmy wielką agencją z salą konferencyjną i account managerem. Jesteśmy dwójką ludzi, którzy robią konkretną robotę.",
+    "contact_line": "Ty dzwonisz — Karol odbiera. Coś nie działa — Wouter naprawia. Bez przekazywania między działami. Bez czekania na \"odpowiedź zespołu\".",
+    "karol": {
+      "role": "Twój kontakt",
+      "bio": "Business Analyst w Colliers. Zrozumie Twój biznes i zadba o każdy szczegół współpracy."
+    },
+    "wouter": {
+      "role": "Buduje",
+      "bio": "Senior developer z doświadczeniem w e-commerce, AI i aplikacjach webowych. Twoja strona w dobrych rękach."
+    },
+    "why_us": {
+      "title": "Dlaczego my?",
+      "point1": {
+        "title": "Wszystko w jednym miejscu",
+        "description": "Strona, SEO, reklamy. Bez zbędnych pośredników."
+      },
+      "point2": {
+        "title": "Szybko i konkretnie",
+        "description": "Gotowe w 2-3 tygodnie, nie 3 miesiące."
+      },
+      "point3": {
+        "title": "Rozmawiasz z ludźmi, nie z firmą",
+        "description": "Znasz nas z imienia, my znamy Twój biznes."
+      }
+    }
+  },
+  "contact": {
+    "title": "Porozmawiajmy",
+    "subtitle": "Odpowiemy w ciągu 24 godzin.",
+    "form": {
+      "name": "Imię",
+      "company": "Firma",
+      "email": "Email",
+      "phone": "Telefon",
+      "message": "Wiadomość",
+      "submit": "Wyślij wiadomość",
+      "sending": "Wysyłanie...",
+      "success": "Dzięki! Odezwiemy się szybciej niż myślisz.",
+      "error": "Coś poszło nie tak. Spróbuj ponownie."
+    },
+    "or": "Lub umów się na rozmowę",
+    "book_call": "Zarezerwuj termin"
+  },
+  "footer": {
+    "tagline": "Strona, SEO i reklamy. Jedna firma, jeden cel.",
+    "privacy": "Polityka prywatności",
+    "rights": "Wszelkie prawa zastrzeżone"
+  }
+}

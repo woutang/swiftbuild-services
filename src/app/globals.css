@@ -1,0 +1,179 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Clash Display Font */
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Extralight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-clash);
+  --font-heading: var(--font-clash);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Typography Scale */
+  --text-hero: clamp(3rem, 8vw, 6rem);
+  --text-h1: clamp(2rem, 5vw, 3.5rem);
+  --text-h2: clamp(1.5rem, 3vw, 2rem);
+  --text-body: 1.125rem;
+  --text-small: 0.875rem;
+}
+
+:root {
+  /* Dark + Electric theme (recommended in design doc) */
+  --font-clash: 'Clash Display', system-ui, sans-serif;
+
+  --radius: 0.5rem;
+
+  /* Dark theme as default - bold and premium */
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+
+  --card: #141414;
+  --card-foreground: #fafafa;
+
+  --popover: #141414;
+  --popover-foreground: #fafafa;
+
+  --primary: #3b82f6;
+  --primary-foreground: #fafafa;
+
+  --secondary: #1a1a1a;
+  --secondary-foreground: #fafafa;
+
+  --muted: #262626;
+  --muted-foreground: #71717a;
+
+  --accent: #3b82f6;
+  --accent-foreground: #fafafa;
+
+  --destructive: #ef4444;
+
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #3b82f6;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-clash);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-clash);
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .text-hero {
+    font-size: var(--text-hero);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradient text effect */
+  .text-gradient {
+    background: linear-gradient(135deg, #fafafa 0%, #71717a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Selection color */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #fafafa;
+}
