@@ -1,5 +1,6 @@
 import { setRequestLocale } from 'next-intl/server';
-import { getDictionary } from '@/lib/i18n';
+import { notFound } from 'next/navigation';
+import { getDictionary, isValidLocale } from '@/lib/i18n';
 import { Hero } from '@/components/sections/hero';
 import { ProblemSolution } from '@/components/sections/problem-solution';
 import { ServicesPreview } from '@/components/sections/services-preview';
@@ -15,10 +16,15 @@ type Props = {
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
+
+  if (!isValidLocale(locale)) {
+    notFound();
+  }
+
   setRequestLocale(locale);
 
-  const dictionary = await getDictionary(locale as 'pl' | 'en');
-  const featuredCaseStudies = getLocalizedFeaturedCaseStudies(locale as 'pl' | 'en');
+  const dictionary = await getDictionary(locale);
+  const featuredCaseStudies = getLocalizedFeaturedCaseStudies(locale);
 
   return (
     <PageTransition>

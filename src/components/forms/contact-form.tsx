@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -16,20 +16,26 @@ type Props = {
   dictionary: Dictionary;
 };
 
-const contactSchema = z.object({
-  name: z.string().min(2, 'Name is required'),
-  company: z.string().optional(),
-  email: z.string().email('Invalid email address'),
-  phone: z.string().optional(),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+type ContactFormData = {
+  name: string;
+  company?: string;
+  email: string;
+  phone?: string;
+  message: string;
+};
 
 const easeOutExpo = [0.22, 1, 0.36, 1] as const;
 
 export function ContactForm({ dictionary }: Props) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+  const contactSchema = useMemo(() => z.object({
+    name: z.string().min(2, dictionary.contact.form.validation.name_required),
+    company: z.string().optional(),
+    email: z.string().email(dictionary.contact.form.validation.email_invalid),
+    phone: z.string().optional(),
+    message: z.string().min(10, dictionary.contact.form.validation.message_min),
+  }), [dictionary]);
 
   const {
     register,

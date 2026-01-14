@@ -27,6 +27,7 @@ export function LanguageSwitcher({ dictionary }: Props) {
         '/uslugi': '/en/services',
         '/realizacje': '/en/portfolio',
         '/o-nas': '/en/about',
+        '/zespol': '/en/team',
         '/kontakt': '/en/contact',
         '/polityka-prywatnosci': '/en/privacy-policy',
       };
@@ -43,6 +44,7 @@ export function LanguageSwitcher({ dictionary }: Props) {
         '/en/services': '/uslugi',
         '/en/portfolio': '/realizacje',
         '/en/about': '/o-nas',
+        '/en/team': '/zespol',
         '/en/contact': '/kontakt',
         '/en/privacy-policy': '/polityka-prywatnosci',
         '/en': '/',

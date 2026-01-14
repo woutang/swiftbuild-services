@@ -8,7 +8,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'swiftbuild.services',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.swiftbuild.services',
       },
     ],
   },

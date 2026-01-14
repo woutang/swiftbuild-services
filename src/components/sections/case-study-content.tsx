@@ -177,28 +177,31 @@ export function CaseStudyContent({ dictionary, caseStudy }: Props) {
           </div>
         </motion.div>
 
-        {/* Gallery placeholder */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6, ease: easeOutExpo }}
-          className="mt-16"
-        >
-          <div className="grid gap-4 md:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="aspect-video overflow-hidden rounded-xl border border-border/50 bg-card"
-              >
-                <div className="flex h-full items-center justify-center bg-gradient-to-br from-card to-muted">
-                  <span className="text-sm text-muted-foreground">
-                    Gallery {i}
-                  </span>
+        {/* Gallery - only show if gallery images exist */}
+        {caseStudy.images.gallery.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.6, ease: easeOutExpo }}
+            className="mt-16"
+          >
+            <div className="grid gap-4 md:grid-cols-3">
+              {caseStudy.images.gallery.map((image, i) => (
+                <div
+                  key={i}
+                  className="aspect-video overflow-hidden rounded-xl border border-border/50 bg-card"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={image}
+                    alt={`${caseStudy.title} gallery ${i + 1}`}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );

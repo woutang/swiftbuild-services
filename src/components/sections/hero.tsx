@@ -71,7 +71,7 @@ export function Hero({ dictionary }: Props) {
           >
             <motion.h1
               variants={itemVariants}
-              className="text-hero max-w-2xl"
+              className="text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[0.95] tracking-tight"
             >
               <span className="block">{dictionary.hero.headline_1}</span>
               <span className="block text-gradient">
@@ -152,10 +152,10 @@ export function Hero({ dictionary }: Props) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.2, duration: 0.5 }}
               style={{ y: floatingCard2Y }}
-              className="absolute -right-4 top-8 rounded-xl border border-border/50 bg-card/80 p-4 backdrop-blur-sm"
+              className="absolute -right-4 top-8 rounded-xl border border-primary/30 bg-primary/10 p-4 backdrop-blur-sm"
             >
-              <div className="text-3xl font-bold text-primary">1</div>
-              <div className="text-sm text-muted-foreground">{dictionary.hero.stat_contact}</div>
+              <div className="text-lg font-bold text-primary">{dictionary.hero.stat_preview}</div>
+              <div className="text-sm text-muted-foreground">{dictionary.hero.stat_preview_desc}</div>
             </motion.div>
           </motion.div>
         </div>

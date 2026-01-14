@@ -1,14 +1,13 @@
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getDictionary } from '@/lib/i18n';
+import { getDictionary, isValidLocale } from '@/lib/i18n';
 import { getCaseStudySlugs, getLocalizedCaseStudy, getAllCaseStudies } from '@/data/case-studies';
 import { CaseStudyHero } from '@/components/sections/case-study-hero';
 import { CaseStudyContent } from '@/components/sections/case-study-content';
 import { CaseStudyNav } from '@/components/sections/case-study-nav';
 import { CtaBanner } from '@/components/sections/cta-banner';
 import { PageTransition } from '@/components/providers/page-transition';
-import type { Locale } from '@/types';
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -25,7 +24,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
-  const caseStudy = getLocalizedCaseStudy(slug, locale as Locale);
+
+  if (!isValidLocale(locale)) {
+    return { title: 'Not Found' };
+  }
+
+  const caseStudy = getLocalizedCaseStudy(slug, locale);
 
   if (!caseStudy) {
     return {
@@ -41,10 +45,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CaseStudyPage({ params }: Props) {
   const { locale, slug } = await params;
+
+  if (!isValidLocale(locale)) {
+    notFound();
+  }
+
   setRequestLocale(locale);
 
-  const dictionary = await getDictionary(locale as Locale);
-  const caseStudy = getLocalizedCaseStudy(slug, locale as Locale);
+  const dictionary = await getDictionary(locale);
+  const caseStudy = getLocalizedCaseStudy(slug, locale);
 
   if (!caseStudy) {
     notFound();
@@ -62,8 +71,8 @@ export default async function CaseStudyPage({ params }: Props) {
       <CaseStudyContent dictionary={dictionary} caseStudy={caseStudy} />
       <CaseStudyNav
         dictionary={dictionary}
-        prevStudy={prevStudy ? { slug: prevStudy.slug, title: prevStudy.title[locale as Locale] } : null}
-        nextStudy={nextStudy ? { slug: nextStudy.slug, title: nextStudy.title[locale as Locale] } : null}
+        prevStudy={prevStudy ? { slug: prevStudy.slug, title: prevStudy.title[locale] } : null}
+        nextStudy={nextStudy ? { slug: nextStudy.slug, title: nextStudy.title[locale] } : null}
       />
       <CtaBanner dictionary={dictionary} />
     </PageTransition>

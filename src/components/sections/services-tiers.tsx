@@ -3,8 +3,18 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Check, Globe, TrendingUp, Rocket } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import type { Dictionary } from '@/types';
+
+type MonthlyTierData = {
+  title: string;
+  subtitle: string;
+  price: string;
+  price_suffix: string;
+  description: string;
+  features: string[];
+  note?: string;
+};
 
 type Props = {
   dictionary: Dictionary;
@@ -18,7 +28,13 @@ export function ServicesTiers({ dictionary }: Props) {
 
   const tiers = dictionary.services_page.tiers;
 
-  const monthlyTiers = [
+  const monthlyTiers: Array<{
+    key: string;
+    data: MonthlyTierData;
+    icon: typeof Globe;
+    color: string;
+    popular: boolean;
+  }> = [
     {
       key: 'starter',
       data: tiers.starter,
@@ -187,9 +203,9 @@ export function ServicesTiers({ dictionary }: Props) {
                       ))}
                     </ul>
 
-                    {'note' in tier.data && (tier.data as { note?: string }).note && (
+                    {tier.data.note && (
                       <p className="mt-4 rounded-lg bg-muted/50 p-3 text-xs text-muted-foreground">
-                        {(tier.data as { note?: string }).note}
+                        {tier.data.note}
                       </p>
                     )}
 

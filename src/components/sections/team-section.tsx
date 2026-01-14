@@ -139,7 +139,7 @@ export function TeamSection({ dictionary }: Props) {
                 {/* Founder badge */}
                 {member.isFounder && (
                   <div className="absolute right-4 top-4 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                    Founder
+                    {dictionary.team.founder_badge}
                   </div>
                 )}
 

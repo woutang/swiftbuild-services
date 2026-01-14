@@ -1,6 +1,7 @@
 import { setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getDictionary } from '@/lib/i18n';
+import { getDictionary, isValidLocale } from '@/lib/i18n';
 import { PortfolioHero } from '@/components/sections/portfolio-hero';
 import { PortfolioGrid } from '@/components/sections/portfolio-grid';
 import { CtaBanner } from '@/components/sections/cta-banner';
@@ -13,7 +14,12 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const dictionary = await getDictionary(locale as 'pl' | 'en');
+
+  if (!isValidLocale(locale)) {
+    return { title: 'Not Found' };
+  }
+
+  const dictionary = await getDictionary(locale);
 
   return {
     title: dictionary.metadata.portfolio_title,
@@ -23,10 +29,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PortfolioPage({ params }: Props) {
   const { locale } = await params;
+
+  if (!isValidLocale(locale)) {
+    notFound();
+  }
+
   setRequestLocale(locale);
 
-  const dictionary = await getDictionary(locale as 'pl' | 'en');
-  const caseStudies = getLocalizedAllCaseStudies(locale as 'pl' | 'en');
+  const dictionary = await getDictionary(locale);
+  const caseStudies = getLocalizedAllCaseStudies(locale);
 
   return (
     <PageTransition>

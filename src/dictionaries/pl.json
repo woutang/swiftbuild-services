@@ -24,14 +24,15 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "headline_1": "STRONA,",
-    "headline_2": "SEO I REKLAMY.",
-    "subheadline": "Jedna firma, jeden cel.",
-    "cta_primary": "Bezpłatna wycena",
+    "headline_1": "STRONY, KTÓRE",
+    "headline_2": "PRZYNOSZĄ KLIENTÓW.",
+    "subheadline": "Nie budujemy ładnych stron. Budujemy silniki przychodów. W 2-3 tygodnie.",
+    "cta_primary": "Zobacz podgląd za darmo",
     "cta_secondary": "Zobacz realizacje",
     "scroll": "Przewiń",
-    "stat_weeks": "tygodnie",
-    "stat_contact": "kontakt"
+    "stat_weeks": "tygodnie do startu",
+    "stat_preview": "Darmowy podgląd",
+    "stat_preview_desc": "zanim zapłacisz"
   },
   "problem": {
     "title": "Brzmi znajomo?",
@@ -46,49 +47,50 @@
     "solution_badge": "Jeden zespół, pełna odpowiedzialność"
   },
   "services": {
-    "title": "Co robimy",
-    "subtitle": "Skupiamy się na trzech rzeczach — i robimy je dobrze.",
-    "website": {
-      "title": "Strony internetowe",
-      "description": "Nowoczesne, szybkie strony które sprzedają",
-      "features": [
-        "Indywidualny design",
-        "Responsywność mobilna",
-        "Szybkie ładowanie",
-        "Gotowe pod SEO"
-      ],
-      "price": "od 8 000 PLN",
-      "timeline": "2-3 tygodnie"
-    },
-    "seo": {
-      "title": "Pozycjonowanie SEO",
-      "description": "Bądź widoczny w Google dla swoich klientów",
-      "features": [
-        "Audyt techniczny",
-        "Badanie słów kluczowych",
-        "Optymalizacja on-page",
-        "Miesięczne raporty"
-      ],
-      "price": "od 1 500 PLN / mies.",
-      "timeline": "Wyniki w 3-6 miesięcy"
-    },
-    "ads": {
-      "title": "Google Ads",
-      "description": "Reklamy które przynoszą konkretne wyniki",
-      "features": [
-        "Strategia kampanii",
-        "Copywriting reklam",
-        "Testy A/B",
-        "Miesięczna optymalizacja"
-      ],
-      "price": "od 1 000 PLN / mies. + budżet",
-      "timeline": "Start w 1 tydzień"
-    },
-    "cta": "Poznaj szczegóły"
+    "title": "Jak możemy pomóc",
+    "subtitle": "Wybierz ścieżkę dopasowaną do Twoich potrzeb",
+    "cta": "Poznaj szczegóły",
+    "home_tiers": {
+      "build": {
+        "title": "Zbuduj stronę",
+        "description": "Nowoczesna strona zoptymalizowana pod konwersję, która pracuje jako Twój najlepszy sprzedawca 24/7.",
+        "price": "od 8 000 PLN",
+        "timeline": "2-3 tygodnie",
+        "features": [
+          "Indywidualny design",
+          "Mobile-first",
+          "SEO wbudowane",
+          "Darmowy podgląd przed startem"
+        ]
+      },
+      "grow": {
+        "title": "Rozwijaj firmę",
+        "description": "Strona + ciągła opieka, SEO i opcjonalnie reklamy. Wszystko pod jednym dachem.",
+        "price": "od 2 500 PLN/mies.",
+        "features": [
+          "Utrzymanie i bezpieczeństwo",
+          "Aktywne SEO",
+          "Miesięczne raporty",
+          "Opcjonalnie: Google Ads"
+        ]
+      },
+      "app": {
+        "title": "Zbuduj aplikację",
+        "description": "MVP lub pełna aplikacja webowa/mobilna. Od pomysłu do działającego produktu.",
+        "price": "od 25 000 PLN",
+        "features": [
+          "Prototyp do walidacji",
+          "MVP w tygodnie",
+          "Skalowalna architektura",
+          "Ciągły rozwój"
+        ]
+      }
+    }
   },
   "portfolio": {
     "title": "Realizacje",
     "subtitle": "Projekty, z których jesteśmy dumni",
+    "view_cursor": "Zobacz",
     "view_project": "Zobacz projekt",
     "view_all": "Zobacz wszystkie realizacje",
     "back": "Wszystkie realizacje",
@@ -102,18 +104,19 @@
     "featured_badge": "Wyróżnione"
   },
   "process": {
-    "title": "Jak działamy",
+    "title": "Zobacz zanim zapłacisz",
+    "subtitle": "Nasz proces zaczyna się od pokazania Ci możliwości, nie od spotkań i ankiet.",
     "step1": {
-      "title": "Rozmowa",
-      "description": "Opowiedz nam o swoim biznesie. Zrozumiemy cele i przygotujemy wycenę."
+      "title": "Podziel się adresem strony",
+      "description": "Wyślij nam link do obecnej strony. Analizujemy co działa, a co można poprawić."
     },
     "step2": {
-      "title": "Realizacja",
-      "description": "Projektujemy i budujemy stronę. Ty akceptujesz, my wdrażamy. Gotowe w 2-3 tygodnie."
+      "title": "Otrzymujesz podgląd",
+      "description": "W kilka dni dostajesz klikalny podgląd nowej strony. Bez zobowiązań, bez płacenia."
     },
     "step3": {
-      "title": "Wyniki",
-      "description": "Uruchamiamy SEO i reklamy. Monitorujemy, optymalizujemy, raportujemy."
+      "title": "Decydujesz z wiedzą",
+      "description": "Widzisz rezultat zanim zainwestujesz. Dopiero wtedy rozmawiamy o szczegółach i cenie."
     }
   },
   "cta": {
@@ -191,6 +194,7 @@
     "title": "Nasz zespół",
     "subtitle": "Ludzie, którzy tworzą Twoje projekty",
     "intro": "Mały, ale zgrany zespół z doświadczeniem w tworzeniu stron dla polskich firm.",
+    "founder_badge": "Założyciel",
     "members": {
       "karol": {
         "name": "Karol Rejf",
@@ -238,7 +242,12 @@
       "placeholder_company": "Nazwa firmy",
       "placeholder_email": "jan@firma.pl",
       "placeholder_phone": "+48 123 456 789",
-      "placeholder_message": "Opowiedz nam o swoim projekcie..."
+      "placeholder_message": "Opowiedz nam o swoim projekcie...",
+      "validation": {
+        "name_required": "Imię jest wymagane",
+        "email_invalid": "Nieprawidłowy adres email",
+        "message_min": "Wiadomość musi mieć co najmniej 10 znaków"
+      }
     },
     "or": "Lub umów się na rozmowę",
     "book_call": "Zarezerwuj termin"

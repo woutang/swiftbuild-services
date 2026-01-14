@@ -1,6 +1,7 @@
 import { setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getDictionary } from '@/lib/i18n';
+import { getDictionary, isValidLocale } from '@/lib/i18n';
 import { AboutHero } from '@/components/sections/about-hero';
 import { FounderSection } from '@/components/sections/founder-section';
 import { ValuesSection } from '@/components/sections/values-section';
@@ -13,7 +14,12 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const dictionary = await getDictionary(locale as 'pl' | 'en');
+
+  if (!isValidLocale(locale)) {
+    return { title: 'Not Found' };
+  }
+
+  const dictionary = await getDictionary(locale);
 
   return {
     title: dictionary.metadata.about_title,
@@ -23,9 +29,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
+
+  if (!isValidLocale(locale)) {
+    notFound();
+  }
+
   setRequestLocale(locale);
 
-  const dictionary = await getDictionary(locale as 'pl' | 'en');
+  const dictionary = await getDictionary(locale);
 
   return (
     <PageTransition>

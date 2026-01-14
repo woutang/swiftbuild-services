@@ -24,14 +24,15 @@
     "contact": "Contact"
   },
   "hero": {
-    "headline_1": "WEBSITE,",
-    "headline_2": "SEO AND ADS.",
-    "subheadline": "One team, one goal.",
-    "cta_primary": "Get a free quote",
+    "headline_1": "WEBSITES THAT",
+    "headline_2": "BRING CUSTOMERS.",
+    "subheadline": "We don't build pretty sites. We build revenue engines. In 2-3 weeks.",
+    "cta_primary": "Get a free preview",
     "cta_secondary": "View portfolio",
     "scroll": "Scroll",
-    "stat_weeks": "weeks",
-    "stat_contact": "contact"
+    "stat_weeks": "weeks to launch",
+    "stat_preview": "Free preview",
+    "stat_preview_desc": "before you pay"
   },
   "problem": {
     "title": "Sound familiar?",
@@ -46,49 +47,50 @@
     "solution_badge": "One team, full accountability"
   },
   "services": {
-    "title": "What we do",
-    "subtitle": "We focus on three things — and do them well.",
-    "website": {
-      "title": "Websites",
-      "description": "Modern, fast websites that sell",
-      "features": [
-        "Custom design",
-        "Mobile responsive",
-        "Fast loading",
-        "SEO ready"
-      ],
-      "price": "from 8,000 PLN",
-      "timeline": "2-3 weeks"
-    },
-    "seo": {
-      "title": "SEO",
-      "description": "Be visible on Google for your customers",
-      "features": [
-        "Technical audit",
-        "Keyword research",
-        "On-page optimization",
-        "Monthly reports"
-      ],
-      "price": "from 1,500 PLN/month",
-      "timeline": "Results in 3-6 months"
-    },
-    "ads": {
-      "title": "Google Ads",
-      "description": "Ads that bring real results",
-      "features": [
-        "Campaign strategy",
-        "Ad copywriting",
-        "A/B testing",
-        "Monthly optimization"
-      ],
-      "price": "from 1,000 PLN/month + budget",
-      "timeline": "Launch in 1 week"
-    },
-    "cta": "Learn more"
+    "title": "How we can help",
+    "subtitle": "Choose the path that fits your needs",
+    "cta": "Learn more",
+    "home_tiers": {
+      "build": {
+        "title": "Build a website",
+        "description": "Modern, conversion-optimized website that works as your best salesperson 24/7.",
+        "price": "from 8,000 PLN",
+        "timeline": "2-3 weeks",
+        "features": [
+          "Custom design",
+          "Mobile-first",
+          "SEO built in",
+          "Free preview before you start"
+        ]
+      },
+      "grow": {
+        "title": "Grow your business",
+        "description": "Website + ongoing care, SEO, and optionally ads. All under one roof.",
+        "price": "from 2,500 PLN/month",
+        "features": [
+          "Maintenance & security",
+          "Active SEO",
+          "Monthly reports",
+          "Optional: Google Ads"
+        ]
+      },
+      "app": {
+        "title": "Build an app",
+        "description": "MVP or full web/mobile app. From idea to working product.",
+        "price": "from 25,000 PLN",
+        "features": [
+          "Prototype for validation",
+          "MVP in weeks",
+          "Scalable architecture",
+          "Continuous development"
+        ]
+      }
+    }
   },
   "portfolio": {
     "title": "Portfolio",
     "subtitle": "Projects we're proud of",
+    "view_cursor": "View",
     "view_project": "View project",
     "view_all": "View all projects",
     "back": "All projects",
@@ -102,18 +104,19 @@
     "featured_badge": "Featured"
   },
   "process": {
-    "title": "How we work",
+    "title": "See before you pay",
+    "subtitle": "Our process starts by showing you possibilities, not meetings and questionnaires.",
     "step1": {
-      "title": "Conversation",
-      "description": "Tell us about your business. We'll understand your goals and prepare a quote."
+      "title": "Share your website",
+      "description": "Send us your current site link. We analyze what works and what can improve."
     },
     "step2": {
-      "title": "Execution",
-      "description": "We design and build the site. You approve, we deploy. Done in 2-3 weeks."
+      "title": "Get a preview",
+      "description": "In days you receive a clickable preview of your new site. No commitment, no payment."
     },
     "step3": {
-      "title": "Results",
-      "description": "We launch SEO and ads. We monitor, optimize, and report."
+      "title": "Decide with knowledge",
+      "description": "You see the result before investing. Only then do we discuss details and pricing."
     }
   },
   "cta": {
@@ -191,6 +194,7 @@
     "title": "Our Team",
     "subtitle": "The people behind your projects",
     "intro": "A small but tight-knit team with experience building websites for Polish businesses.",
+    "founder_badge": "Founder",
     "members": {
       "karol": {
         "name": "Karol Rejf",
@@ -238,7 +242,12 @@
       "placeholder_company": "Company name",
       "placeholder_email": "john@company.com",
       "placeholder_phone": "+48 123 456 789",
-      "placeholder_message": "Tell us about your project..."
+      "placeholder_message": "Tell us about your project...",
+      "validation": {
+        "name_required": "Name is required",
+        "email_invalid": "Invalid email address",
+        "message_min": "Message must be at least 10 characters"
+      }
     },
     "or": "Or book a call",
     "book_call": "Book a time"

@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
-// HTML escape function to prevent XSS attacks
-function escapeHtml(text: string): string {
+// HTML escape function to prevent XSS attacks in email body
+// Used when Resend is enabled - see commented code below
+function _escapeHtml(text: string): string {
   const map: Record<string, string> = {
     '&': '&amp;',
     '<': '&lt;',
@@ -13,6 +14,12 @@ function escapeHtml(text: string): string {
   return text.replace(/[&<>"']/g, (char) => map[char] ?? char);
 }
 
+// Sanitize subject line (remove newlines, don't HTML encode)
+// Used when Resend is enabled - see commented code below
+function _sanitizeSubject(text: string): string {
+  return text.replace(/[\r\n]/g, ' ').trim();
+}
+
 const contactSchema = z.object({
   name: z.string().min(2),
   company: z.string().optional(),
@@ -21,8 +28,41 @@ const contactSchema = z.object({
   message: z.string().min(10),
 });
 
+// Simple in-memory rate limiter
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
+const RATE_LIMIT_MAX = 5; // 5 requests per minute
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const record = rateLimitMap.get(ip);
+
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_LIMIT_WINDOW });
+    return true;
+  }
+
+  if (record.count >= RATE_LIMIT_MAX) {
+    return false;
+  }
+
+  record.count++;
+  return true;
+}
+
 export async function POST(request: Request) {
   try {
+    // Rate limiting
+    const forwarded = request.headers.get('x-forwarded-for');
+    const ip = forwarded ? forwarded.split(',')[0].trim() : '127.0.0.1';
+
+    if (!checkRateLimit(ip)) {
+      return NextResponse.json(
+        { success: false, message: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      );
+    }
+
     const body = await request.json();
     const data = contactSchema.parse(body);
 
@@ -36,7 +76,7 @@ export async function POST(request: Request) {
       from: 'SwiftBuild <noreply@swiftbuild.services>',
       to: ['kontakt@swiftbuild.services'],
       replyTo: data.email,
-      subject: `Nowe zapytanie od ${escapeHtml(data.name)}${data.company ? ` (${escapeHtml(data.company)})` : ''}`,
+      subject: `Nowe zapytanie od ${sanitizeSubject(data.name)}${data.company ? ` (${sanitizeSubject(data.company)})` : ''}`,
       html: `
         <h2>Nowe zapytanie ze strony</h2>
         <p><strong>Imię:</strong> ${escapeHtml(data.name)}</p>

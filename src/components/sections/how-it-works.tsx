@@ -2,7 +2,9 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { MessageSquare, Code, Rocket } from 'lucide-react';
+import { Link as LinkIcon, Eye, CheckCircle } from 'lucide-react';
+import { Link } from '@/i18n/navigation';
+import { Button } from '@/components/ui/button';
 import type { Dictionary } from '@/types';
 
 type Props = {
@@ -10,10 +12,12 @@ type Props = {
 };
 
 const steps = [
-  { key: 'step1', icon: MessageSquare, number: '01' },
-  { key: 'step2', icon: Code, number: '02' },
-  { key: 'step3', icon: Rocket, number: '03' },
+  { key: 'step1', icon: LinkIcon, number: '01' },
+  { key: 'step2', icon: Eye, number: '02' },
+  { key: 'step3', icon: CheckCircle, number: '03' },
 ] as const;
+
+const easeOutExpo = [0.22, 1, 0.36, 1] as const;
 
 export function HowItWorks({ dictionary }: Props) {
   const ref = useRef(null);
@@ -29,12 +33,17 @@ export function HowItWorks({ dictionary }: Props) {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, ease: easeOutExpo }}
           className="text-center"
         >
           <h2 className="text-4xl font-bold md:text-5xl">
             {dictionary.process.title}
           </h2>
+          {dictionary.process.subtitle && (
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+              {dictionary.process.subtitle}
+            </p>
+          )}
         </motion.div>
 
         {/* Steps */}
@@ -58,7 +67,7 @@ export function HowItWorks({ dictionary }: Props) {
                   transition={{
                     duration: 0.6,
                     delay: 0.2 + index * 0.15,
-                    ease: [0.22, 1, 0.36, 1],
+                    ease: easeOutExpo,
                   }}
                   className="relative text-center"
                 >
@@ -83,6 +92,18 @@ export function HowItWorks({ dictionary }: Props) {
             })}
           </div>
         </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.6, ease: easeOutExpo }}
+          className="mt-16 text-center"
+        >
+          <Button asChild size="lg" className="text-lg">
+            <Link href="/kontakt">{dictionary.hero.cta_primary}</Link>
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

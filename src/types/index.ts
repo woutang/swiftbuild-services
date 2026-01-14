@@ -2,7 +2,8 @@ import pl from '@/dictionaries/pl.json';
 
 export type Dictionary = typeof pl;
 
-export type Locale = 'pl' | 'en';
+// Re-export Locale from routing as the single source of truth
+export type { Locale } from '@/i18n/routing';
 
 export type LocalizedString = {
   pl: string;
