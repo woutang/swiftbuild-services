@@ -9,6 +9,7 @@ type Props = {
 
 export function SmoothScrollProvider({ children }: Props) {
   const lenisRef = useRef<Lenis | null>(null);
+  const rafIdRef = useRef<number | null>(null);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -22,12 +23,15 @@ export function SmoothScrollProvider({ children }: Props) {
 
     function raf(time: number) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafIdRef.current = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    rafIdRef.current = requestAnimationFrame(raf);
 
     return () => {
+      if (rafIdRef.current !== null) {
+        cancelAnimationFrame(rafIdRef.current);
+      }
       lenis.destroy();
     };
   }, []);

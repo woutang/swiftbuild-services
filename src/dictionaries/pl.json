@@ -15,7 +15,9 @@
     "subheadline": "Jedna firma, jeden cel.",
     "cta_primary": "Bezpłatna wycena",
     "cta_secondary": "Zobacz realizacje",
-    "scroll": "Przewiń"
+    "scroll": "Przewiń",
+    "stat_weeks": "tygodnie",
+    "stat_contact": "kontakt"
   },
   "problem": {
     "title": "Brzmi znajomo?",
@@ -26,7 +28,8 @@
       "Chcesz zmienić coś na stronie i czekasz 2 tygodnie"
     ],
     "solution_title": "Robimy to inaczej.",
-    "solution_text": "Jedna firma. Strona, SEO i reklamy. Jeśli coś nie działa — to nasz problem, nie Twój."
+    "solution_text": "Jedna firma. Strona, SEO i reklamy. Jeśli coś nie działa — to nasz problem, nie Twój.",
+    "solution_badge": "Jeden zespół, pełna odpowiedzialność"
   },
   "services": {
     "title": "Co robimy",
@@ -148,6 +151,11 @@
   "footer": {
     "tagline": "Strona, SEO i reklamy. Jedna firma, jeden cel.",
     "privacy": "Polityka prywatności",
-    "rights": "Wszelkie prawa zastrzeżone"
+    "rights": "Wszelkie prawa zastrzeżone",
+    "menu_label": "Menu"
+  },
+  "accessibility": {
+    "open_menu": "Otwórz menu",
+    "close_menu": "Zamknij menu"
   }
 }

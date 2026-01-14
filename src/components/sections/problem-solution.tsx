@@ -35,7 +35,7 @@ export function ProblemSolution({ dictionary }: Props) {
             <ul className="mt-8 space-y-6">
               {dictionary.problem.points.map((point, index) => (
                 <motion.li
-                  key={index}
+                  key={`problem-point-${index}`}
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{
@@ -77,7 +77,7 @@ export function ProblemSolution({ dictionary }: Props) {
                   <Check className="h-5 w-5 text-primary-foreground" />
                 </div>
                 <span className="text-lg font-medium">
-                  Jeden zespół, pełna odpowiedzialność
+                  {dictionary.problem.solution_badge}
                 </span>
               </div>
             </div>

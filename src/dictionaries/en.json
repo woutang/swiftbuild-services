@@ -15,7 +15,9 @@
     "subheadline": "One team, one goal.",
     "cta_primary": "Get a free quote",
     "cta_secondary": "View portfolio",
-    "scroll": "Scroll"
+    "scroll": "Scroll",
+    "stat_weeks": "weeks",
+    "stat_contact": "contact"
   },
   "problem": {
     "title": "Sound familiar?",
@@ -26,7 +28,8 @@
       "You want to change something on the site and wait 2 weeks"
     ],
     "solution_title": "We do it differently.",
-    "solution_text": "One company. Website, SEO and ads. If something doesn't work — it's our problem, not yours."
+    "solution_text": "One company. Website, SEO and ads. If something doesn't work — it's our problem, not yours.",
+    "solution_badge": "One team, full accountability"
   },
   "services": {
     "title": "What we do",
@@ -148,6 +151,11 @@
   "footer": {
     "tagline": "Website, SEO and ads. One team, one goal.",
     "privacy": "Privacy policy",
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "menu_label": "Menu"
+  },
+  "accessibility": {
+    "open_menu": "Open menu",
+    "close_menu": "Close menu"
   }
 }

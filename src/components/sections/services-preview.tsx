@@ -10,7 +10,13 @@ type Props = {
   dictionary: Dictionary;
 };
 
-const services = [
+type ServiceKey = 'website' | 'seo' | 'ads';
+
+const services: ReadonlyArray<{
+  key: ServiceKey;
+  icon: typeof Globe;
+  gradient: string;
+}> = [
   {
     key: 'website',
     icon: Globe,
@@ -26,7 +32,7 @@ const services = [
     icon: Target,
     gradient: 'from-orange-500/20 to-amber-500/20',
   },
-] as const;
+];
 
 export function ServicesPreview({ dictionary }: Props) {
   const ref = useRef(null);
@@ -54,10 +60,7 @@ export function ServicesPreview({ dictionary }: Props) {
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           {services.map((service, index) => {
             const Icon = service.icon;
-            const serviceData =
-              dictionary.services[service.key as keyof typeof dictionary.services];
-
-            if (typeof serviceData === 'string') return null;
+            const serviceData = dictionary.services[service.key];
 
             return (
               <motion.div
@@ -98,7 +101,7 @@ export function ServicesPreview({ dictionary }: Props) {
                       <ul className="mt-6 space-y-2">
                         {serviceData.features.slice(0, 3).map((feature, i) => (
                           <li
-                            key={i}
+                            key={`${service.key}-feature-${i}`}
                             className="flex items-center gap-2 text-sm text-muted-foreground"
                           >
                             <span className="h-1 w-1 rounded-full bg-primary" />

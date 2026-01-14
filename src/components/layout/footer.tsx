@@ -25,7 +25,7 @@ export function Footer({ dictionary }: Props) {
           {/* Navigation */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-              Menu
+              {dictionary.footer.menu_label}
             </h3>
             <nav className="flex flex-col gap-2">
               <Link

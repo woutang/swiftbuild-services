@@ -91,18 +91,20 @@ export function Hero({ dictionary }: Props) {
             className="relative hidden lg:block"
           >
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border/50 bg-card">
-              {/* Placeholder for video - replace with actual video loop */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="mb-4 text-6xl">🎬</div>
-                  <p className="text-muted-foreground">
-                    Video loop placeholder
-                  </p>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    Add screen recording of Celtic/DeluxDeco sites
-                  </p>
+              {/* TODO: Replace with actual video loop of Celtic/DeluxDeco sites */}
+              {process.env.NODE_ENV === 'development' && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="mb-4 text-6xl">🎬</div>
+                    <p className="text-muted-foreground">
+                      Video loop placeholder
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      Add screen recording of Celtic/DeluxDeco sites
+                    </p>
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Decorative elements */}
               <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full border border-primary/20" />
@@ -117,7 +119,7 @@ export function Hero({ dictionary }: Props) {
               className="absolute -left-8 bottom-12 rounded-xl border border-border/50 bg-card/80 p-4 backdrop-blur-sm"
             >
               <div className="text-3xl font-bold text-primary">2-3</div>
-              <div className="text-sm text-muted-foreground">tygodnie</div>
+              <div className="text-sm text-muted-foreground">{dictionary.hero.stat_weeks}</div>
             </motion.div>
 
             <motion.div
@@ -127,7 +129,7 @@ export function Hero({ dictionary }: Props) {
               className="absolute -right-4 top-8 rounded-xl border border-border/50 bg-card/80 p-4 backdrop-blur-sm"
             >
               <div className="text-3xl font-bold text-primary">1</div>
-              <div className="text-sm text-muted-foreground">kontakt</div>
+              <div className="text-sm text-muted-foreground">{dictionary.hero.stat_contact}</div>
             </motion.div>
           </motion.div>
         </div>

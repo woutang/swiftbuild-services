@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Link, usePathname } from '@/i18n/navigation';
-import { useLocale } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { LanguageSwitcher } from './language-switcher';
@@ -23,7 +22,6 @@ const navItems = [
 
 export function Header({ dictionary }: Props) {
   const pathname = usePathname();
-  const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -81,7 +79,11 @@ export function Header({ dictionary }: Props) {
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="md:hidden">
-                <Button variant="ghost" size="icon">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  aria-label={isOpen ? dictionary.accessibility.close_menu : dictionary.accessibility.open_menu}
+                >
                   {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                 </Button>
               </SheetTrigger>
