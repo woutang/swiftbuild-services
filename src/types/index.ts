@@ -4,10 +4,15 @@ export type Dictionary = typeof pl;
 
 export type Locale = 'pl' | 'en';
 
+export type LocalizedString = {
+  pl: string;
+  en: string;
+};
+
 export type CaseStudy = {
   slug: string;
-  title: string;
-  description: string;
+  title: LocalizedString;
+  description: LocalizedString;
   tags: string[];
   client: string;
   url: string;
@@ -18,9 +23,9 @@ export type CaseStudy = {
     gallery: string[];
   };
   content: {
-    about: string;
-    challenge: string;
-    solution: string;
-    tasks: string[];
+    about: LocalizedString;
+    challenge: LocalizedString;
+    solution: LocalizedString;
+    tasks: LocalizedString[];
   };
 };

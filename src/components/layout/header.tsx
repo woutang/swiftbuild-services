@@ -6,7 +6,7 @@ import { Menu, X } from 'lucide-react';
 import { Link, usePathname } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { LanguageSwitcher } from './language-switcher';
+import { LanguageSwitcher } from '@/components/layout/language-switcher';
 import type { Dictionary } from '@/types';
 
 type Props = {
@@ -35,7 +35,7 @@ export function Header({ dictionary }: Props) {
         <nav className="flex items-center justify-between rounded-full border border-border/50 bg-background/80 px-6 py-3 backdrop-blur-md">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold tracking-tight">
-            Swift<span className="text-primary">Build</span>
+            {dictionary.brand.name.slice(0, 5)}<span className="text-primary">{dictionary.brand.name.slice(5)}</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -65,7 +65,7 @@ export function Header({ dictionary }: Props) {
 
           {/* Right side */}
           <div className="flex items-center gap-4">
-            <LanguageSwitcher />
+            <LanguageSwitcher dictionary={dictionary} />
 
             {/* Desktop CTA */}
             <Button

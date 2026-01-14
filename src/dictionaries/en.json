@@ -1,7 +1,18 @@
 {
   "metadata": {
+    "site_name": "SwiftBuild",
     "title": "SwiftBuild - Websites, SEO, Google Ads",
-    "description": "Modern websites, SEO optimization and Google Ads campaigns. One team, one goal. Free quote."
+    "description": "Modern websites, SEO optimization and Google Ads campaigns. One team, one goal. Free quote.",
+    "services_title": "Services | SwiftBuild",
+    "services_description": "Websites, SEO and Google Ads. Discover our services and see how we can help your business.",
+    "portfolio_title": "Portfolio | SwiftBuild",
+    "portfolio_description": "See our projects. Websites and marketing campaigns for Polish businesses.",
+    "about_title": "About | SwiftBuild",
+    "about_description": "Meet Wouter and Karol. Two people who build websites that work.",
+    "contact_title": "Contact | SwiftBuild",
+    "contact_description": "Let's talk about your project. Free quote within 24 hours.",
+    "privacy_title": "Privacy Policy | SwiftBuild",
+    "privacy_description": "Information about how SwiftBuild processes personal data."
   },
   "nav": {
     "services": "Services",
@@ -152,10 +163,144 @@
     "tagline": "Website, SEO and ads. One team, one goal.",
     "privacy": "Privacy policy",
     "rights": "All rights reserved",
-    "menu_label": "Menu"
+    "menu_label": "Menu",
+    "email": "karol@swiftbuild.services",
+    "linkedin_url": "https://linkedin.com/company/swiftbuild",
+    "linkedin_label": "LinkedIn"
   },
   "accessibility": {
     "open_menu": "Open menu",
-    "close_menu": "Close menu"
+    "close_menu": "Close menu",
+    "switch_language": "Switch language"
+  },
+  "brand": {
+    "name": "SwiftBuild"
+  },
+  "services_page": {
+    "hero": {
+      "headline": "Services",
+      "subheadline": "Website, SEO and ads. Everything you need in one place."
+    },
+    "website_detail": {
+      "title": "Websites",
+      "intro": "Modern websites that attract customers and sell.",
+      "what_you_get": "What you get",
+      "features": [
+        "Custom design tailored to your brand",
+        "Responsive design that works on all devices",
+        "Speed optimization — loads in under 3 seconds",
+        "Basic SEO optimization included",
+        "Admin panel for self-editing content",
+        "SSL certificate and secure hosting"
+      ],
+      "process": "How it works",
+      "process_steps": [
+        "Brief and understanding your business",
+        "Design mockup for approval",
+        "Building the site with preview access",
+        "Testing and revisions",
+        "Launch and training"
+      ]
+    },
+    "seo_detail": {
+      "title": "SEO",
+      "intro": "Be visible where your customers are searching.",
+      "what_you_get": "What you get",
+      "features": [
+        "Full technical audit of your site",
+        "Competitor and keyword analysis",
+        "On-page optimization (titles, descriptions, headings)",
+        "Link building",
+        "Monthly reports with visibility and rankings",
+        "Content marketing recommendations"
+      ],
+      "timeline_note": "SEO is a marathon, not a sprint. Expect first results after 3-6 months of consistent work."
+    },
+    "ads_detail": {
+      "title": "Google Ads",
+      "intro": "Ads that reach the right people at the right time.",
+      "what_you_get": "What you get",
+      "features": [
+        "Campaign strategy tailored to your goals",
+        "Creating and optimizing text ads",
+        "Remarketing — reach visitors again",
+        "A/B testing for maximum effectiveness",
+        "Bid and budget optimization",
+        "Weekly reports and monthly summaries"
+      ],
+      "budget_note": "Add advertising budget to management cost. We recommend minimum 2000 PLN monthly."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "questions": [
+        {
+          "q": "How much does a website cost?",
+          "a": "Prices start from 8000 PLN for a business card website. Exact pricing depends on project scope — number of pages, features and integrations. We'll quote your project for free."
+        },
+        {
+          "q": "How long does it take to build a website?",
+          "a": "A standard business website takes 2-3 weeks from design approval. More complex projects may take 4-6 weeks."
+        },
+        {
+          "q": "Can I edit the website myself?",
+          "a": "Yes, we provide an admin panel and train you on how to use it. You'll be able to change texts, photos and add new content yourself."
+        },
+        {
+          "q": "When will I see SEO results?",
+          "a": "First visible results appear after 3-6 months. SEO is a long-term investment, but it brings stable and growing results."
+        },
+        {
+          "q": "What budget do I need for Google Ads?",
+          "a": "We recommend minimum 2000 PLN monthly for the ad budget alone. Management cost is additional. Smaller budgets are possible, but results will be proportionally smaller."
+        },
+        {
+          "q": "Do you sign long-term contracts?",
+          "a": "For SEO and Google Ads we recommend minimum 6 months to see real results. But we don't lock in clients — if you're not satisfied, you can leave with one month notice."
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "last_updated": "Last updated",
+    "intro": "This privacy policy describes how SwiftBuild collects, uses and protects personal data of our website users.",
+    "sections": {
+      "data_controller": {
+        "title": "Data Controller",
+        "content": "The controller of your personal data is SwiftBuild. For matters related to data protection, you can contact us at: kontakt@swiftbuild.services"
+      },
+      "data_collection": {
+        "title": "What data we collect",
+        "content": "We collect data you provide directly through the contact form: name, surname, email address, phone number and message content. Additionally, we automatically collect technical data: IP address, browser type, visit time."
+      },
+      "data_purpose": {
+        "title": "How we use your data",
+        "content": "We use data to: respond to your inquiries, prepare cooperation offers, deliver services, and for analytical purposes (improving website performance)."
+      },
+      "data_sharing": {
+        "title": "Who we share data with",
+        "content": "We don't sell or rent your data. We may share data with trusted technology partners (hosting, email) only to the extent necessary to provide services."
+      },
+      "data_retention": {
+        "title": "How long we keep data",
+        "content": "We store data for the period necessary to achieve the purposes for which it was collected, or until consent is withdrawn, and then for the period required by law."
+      },
+      "your_rights": {
+        "title": "Your rights",
+        "content": "You have the right to: access your data, rectification, erasure, restriction of processing, data portability and to object. To exercise these rights, contact us by email."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "Our website uses cookies for analytical and functional purposes. You can manage cookies in your browser settings."
+      },
+      "changes": {
+        "title": "Policy changes",
+        "content": "We reserve the right to update this policy. We will inform you of significant changes by updating the last modified date at the top of the page."
+      }
+    }
+  },
+  "featured_work": {
+    "title": "Featured work",
+    "subtitle": "Projects we're particularly proud of"
   }
 }

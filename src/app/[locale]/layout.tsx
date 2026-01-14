@@ -34,14 +34,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: {
       default: dict.metadata.title,
-      template: `%s | SwiftBuild`,
+      template: `%s | ${dict.metadata.site_name}`,
     },
     description: dict.metadata.description,
     metadataBase: new URL('https://swiftbuild.services'),
     openGraph: {
       type: 'website',
       locale: locale === 'pl' ? 'pl_PL' : 'en_US',
-      siteName: 'SwiftBuild',
+      siteName: dict.metadata.site_name,
     },
   };
 }
@@ -58,8 +58,58 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
   const dictionary = await getDictionary(locale);
 
+  // Structured data - Organization schema
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'SwiftBuild',
+    url: 'https://swiftbuild.services',
+    logo: 'https://swiftbuild.services/logo.png',
+    description: dictionary.metadata.description,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'kontakt@swiftbuild.services',
+      contactType: 'customer service',
+      availableLanguage: ['Polish', 'English'],
+    },
+    sameAs: [],
+  };
+
+  // LocalBusiness schema
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'SwiftBuild',
+    url: 'https://swiftbuild.services',
+    description: dictionary.metadata.description,
+    priceRange: '$$',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'PL',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Poland',
+    },
+    serviceType: ['Web Development', 'SEO', 'Google Ads', 'Digital Marketing'],
+  };
+
   return (
     <html lang={locale} className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+      </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           <SmoothScrollProvider>

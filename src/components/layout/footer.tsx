@@ -15,7 +15,7 @@ export function Footer({ dictionary }: Props) {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="text-2xl font-bold tracking-tight">
-              Swift<span className="text-primary">Build</span>
+              {dictionary.brand.name.slice(0, 5)}<span className="text-primary">{dictionary.brand.name.slice(5)}</span>
             </Link>
             <p className="mt-4 max-w-md text-muted-foreground">
               {dictionary.footer.tagline}
@@ -62,18 +62,18 @@ export function Footer({ dictionary }: Props) {
             </h3>
             <div className="flex flex-col gap-2 text-foreground">
               <a
-                href="mailto:karol@swiftbuild.services"
+                href={`mailto:${dictionary.footer.email}`}
                 className="transition-colors hover:text-primary"
               >
-                karol@swiftbuild.services
+                {dictionary.footer.email}
               </a>
               <a
-                href="https://linkedin.com/company/swiftbuild"
+                href={dictionary.footer.linkedin_url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-primary"
               >
-                LinkedIn
+                {dictionary.footer.linkedin_label}
               </a>
             </div>
           </div>
@@ -82,7 +82,7 @@ export function Footer({ dictionary }: Props) {
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 md:flex-row">
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} SwiftBuild. {dictionary.footer.rights}.
+            &copy; {currentYear} {dictionary.brand.name}. {dictionary.footer.rights}.
           </p>
           <Link
             href="/polityka-prywatnosci"

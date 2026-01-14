@@ -95,7 +95,6 @@ export function Hero({ dictionary }: Props) {
               {process.env.NODE_ENV === 'development' && (
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="mb-4 text-6xl">🎬</div>
                     <p className="text-muted-foreground">
                       Video loop placeholder
                     </p>

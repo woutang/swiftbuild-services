@@ -1,7 +1,18 @@
 {
   "metadata": {
+    "site_name": "SwiftBuild",
     "title": "SwiftBuild - Strony internetowe, SEO, Google Ads",
-    "description": "Nowoczesne strony internetowe, pozycjonowanie SEO i kampanie Google Ads. Jedna firma, jeden cel. Bezpłatna wycena."
+    "description": "Nowoczesne strony internetowe, pozycjonowanie SEO i kampanie Google Ads. Jedna firma, jeden cel. Bezpłatna wycena.",
+    "services_title": "Usługi | SwiftBuild",
+    "services_description": "Strony internetowe, SEO i Google Ads. Poznaj nasze usługi i zobacz jak możemy pomóc Twojej firmie.",
+    "portfolio_title": "Realizacje | SwiftBuild",
+    "portfolio_description": "Zobacz nasze projekty. Strony internetowe i kampanie marketingowe dla polskich firm.",
+    "about_title": "O nas | SwiftBuild",
+    "about_description": "Poznaj Wouter i Karol. Dwóch ludzi, którzy budują strony internetowe, które działają.",
+    "contact_title": "Kontakt | SwiftBuild",
+    "contact_description": "Porozmawiajmy o Twoim projekcie. Bezpłatna wycena w 24 godziny.",
+    "privacy_title": "Polityka prywatności | SwiftBuild",
+    "privacy_description": "Informacje o przetwarzaniu danych osobowych przez SwiftBuild."
   },
   "nav": {
     "services": "Usługi",
@@ -152,10 +163,144 @@
     "tagline": "Strona, SEO i reklamy. Jedna firma, jeden cel.",
     "privacy": "Polityka prywatności",
     "rights": "Wszelkie prawa zastrzeżone",
-    "menu_label": "Menu"
+    "menu_label": "Menu",
+    "email": "karol@swiftbuild.services",
+    "linkedin_url": "https://linkedin.com/company/swiftbuild",
+    "linkedin_label": "LinkedIn"
   },
   "accessibility": {
     "open_menu": "Otwórz menu",
-    "close_menu": "Zamknij menu"
+    "close_menu": "Zamknij menu",
+    "switch_language": "Zmień język"
+  },
+  "brand": {
+    "name": "SwiftBuild"
+  },
+  "services_page": {
+    "hero": {
+      "headline": "Usługi",
+      "subheadline": "Strona, SEO i reklamy. Wszystko czego potrzebujesz w jednym miejscu."
+    },
+    "website_detail": {
+      "title": "Strony internetowe",
+      "intro": "Nowoczesne strony, które przyciągają klientów i sprzedają.",
+      "what_you_get": "Co dostajesz",
+      "features": [
+        "Indywidualny projekt dopasowany do Twojej marki",
+        "Responsywny design działający na wszystkich urządzeniach",
+        "Optymalizacja szybkości — strona ładuje się w mniej niż 3 sekundy",
+        "Podstawowa optymalizacja SEO w cenie",
+        "Panel administracyjny do samodzielnej edycji treści",
+        "Certyfikat SSL i bezpieczny hosting"
+      ],
+      "process": "Jak to wygląda",
+      "process_steps": [
+        "Brief i zrozumienie Twojego biznesu",
+        "Projekt graficzny do akceptacji",
+        "Budowa strony z możliwością podglądu",
+        "Testy i poprawki",
+        "Uruchomienie i szkolenie z obsługi"
+      ]
+    },
+    "seo_detail": {
+      "title": "Pozycjonowanie SEO",
+      "intro": "Bądź widoczny tam, gdzie szukają Twoi klienci.",
+      "what_you_get": "Co dostajesz",
+      "features": [
+        "Pełny audyt techniczny strony",
+        "Analiza konkurencji i słów kluczowych",
+        "Optymalizacja on-page (tytuły, opisy, nagłówki)",
+        "Budowa profilu linków",
+        "Miesięczne raporty z widocznością i pozycjami",
+        "Rekomendacje content marketingowe"
+      ],
+      "timeline_note": "SEO to maraton, nie sprint. Pierwsze efekty zobaczysz po 3-6 miesiącach systematycznej pracy."
+    },
+    "ads_detail": {
+      "title": "Google Ads",
+      "intro": "Reklamy, które trafiają do właściwych ludzi w odpowiednim momencie.",
+      "what_you_get": "Co dostajesz",
+      "features": [
+        "Strategia kampanii dopasowana do Twoich celów",
+        "Tworzenie i optymalizacja reklam tekstowych",
+        "Remarketing — docieraj do odwiedzających ponownie",
+        "Testy A/B dla maksymalnej skuteczności",
+        "Optymalizacja stawek i budżetu",
+        "Cotygodniowe raporty i miesięczne podsumowania"
+      ],
+      "budget_note": "Do kosztu obsługi dolicz budżet reklamowy. Zalecamy minimum 2000 PLN miesięcznie."
+    },
+    "faq": {
+      "title": "Często zadawane pytania",
+      "questions": [
+        {
+          "q": "Ile kosztuje strona internetowa?",
+          "a": "Ceny zaczynają się od 8000 PLN za stronę wizytówkową. Dokładna wycena zależy od zakresu projektu — liczby podstron, funkcjonalności i integracji. Bezpłatnie wycenimy Twój projekt."
+        },
+        {
+          "q": "Jak długo trwa budowa strony?",
+          "a": "Standardowa strona firmowa to 2-3 tygodnie od akceptacji projektu. Bardziej rozbudowane projekty mogą zająć 4-6 tygodni."
+        },
+        {
+          "q": "Czy mogę sam edytować stronę?",
+          "a": "Tak, dostarczamy panel administracyjny i szkolimy z jego obsługi. Będziesz mógł samodzielnie zmieniać teksty, zdjęcia i dodawać nowe treści."
+        },
+        {
+          "q": "Kiedy zobaczę efekty SEO?",
+          "a": "Pierwsze widoczne efekty pojawiają się po 3-6 miesiącach. SEO to długoterminowa inwestycja, ale przynosi stabilne i rosnące wyniki."
+        },
+        {
+          "q": "Jaki budżet potrzebuję na Google Ads?",
+          "a": "Zalecamy minimum 2000 PLN miesięcznie na sam budżet reklamowy. Do tego dochodzi koszt obsługi. Mniejsze budżety są możliwe, ale wyniki będą proporcjonalnie mniejsze."
+        },
+        {
+          "q": "Czy podpisujecie umowy długoterminowe?",
+          "a": "Dla SEO i Google Ads zalecamy minimum 6 miesięcy współpracy, żeby zobaczyć realne efekty. Ale nie wiążemy klientów — jeśli nie jesteś zadowolony, możesz odejść z miesięcznym wypowiedzeniem."
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "title": "Polityka prywatności",
+    "last_updated": "Ostatnia aktualizacja",
+    "intro": "Niniejsza polityka prywatności opisuje, w jaki sposób SwiftBuild zbiera, wykorzystuje i chroni dane osobowe użytkowników naszej strony internetowej.",
+    "sections": {
+      "data_controller": {
+        "title": "Administrator danych",
+        "content": "Administratorem Twoich danych osobowych jest SwiftBuild. W sprawach związanych z ochroną danych osobowych możesz kontaktować się z nami pod adresem e-mail: kontakt@swiftbuild.services"
+      },
+      "data_collection": {
+        "title": "Jakie dane zbieramy",
+        "content": "Zbieramy dane, które przekazujesz nam bezpośrednio przez formularz kontaktowy: imię, nazwisko, adres e-mail, numer telefonu oraz treść wiadomości. Dodatkowo automatycznie zbieramy dane techniczne: adres IP, typ przeglądarki, czas wizyty."
+      },
+      "data_purpose": {
+        "title": "W jakim celu wykorzystujemy dane",
+        "content": "Dane wykorzystujemy do: odpowiedzi na Twoje zapytania, przygotowania oferty współpracy, realizacji usług, oraz w celach analitycznych (poprawa działania strony)."
+      },
+      "data_sharing": {
+        "title": "Komu udostępniamy dane",
+        "content": "Nie sprzedajemy ani nie wypożyczamy Twoich danych. Możemy udostępniać dane zaufanym partnerom technologicznym (hosting, e-mail) wyłącznie w zakresie niezbędnym do świadczenia usług."
+      },
+      "data_retention": {
+        "title": "Jak długo przechowujemy dane",
+        "content": "Dane przechowujemy przez okres niezbędny do realizacji celów, dla których zostały zebrane, lub do czasu wycofania zgody, a następnie przez okres wymagany przepisami prawa."
+      },
+      "your_rights": {
+        "title": "Twoje prawa",
+        "content": "Masz prawo do: dostępu do swoich danych, sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz wniesienia sprzeciwu. Aby skorzystać z tych praw, skontaktuj się z nami mailowo."
+      },
+      "cookies": {
+        "title": "Pliki cookies",
+        "content": "Nasza strona wykorzystuje pliki cookies do celów analitycznych i funkcjonalnych. Możesz zarządzać cookies w ustawieniach swojej przeglądarki."
+      },
+      "changes": {
+        "title": "Zmiany w polityce",
+        "content": "Zastrzegamy sobie prawo do aktualizacji niniejszej polityki. O istotnych zmianach poinformujemy poprzez aktualizację daty ostatniej zmiany na górze strony."
+      }
+    }
+  },
+  "featured_work": {
+    "title": "Wybrane realizacje",
+    "subtitle": "Projekty, z których jesteśmy szczególnie dumni"
   }
 }

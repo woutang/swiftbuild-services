@@ -99,7 +99,7 @@ export function ServicesPreview({ dictionary }: Props) {
 
                       {/* Features */}
                       <ul className="mt-6 space-y-2">
-                        {serviceData.features.slice(0, 3).map((feature, i) => (
+                        {(serviceData.features ?? []).slice(0, 3).map((feature, i) => (
                           <li
                             key={`${service.key}-feature-${i}`}
                             className="flex items-center gap-2 text-sm text-muted-foreground"

@@ -3,8 +3,13 @@
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
+import type { Dictionary } from '@/types';
 
-export function LanguageSwitcher() {
+type Props = {
+  dictionary: Dictionary;
+};
+
+export function LanguageSwitcher({ dictionary }: Props) {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -13,6 +18,9 @@ export function LanguageSwitcher() {
     // Get current pathname and convert to new locale
     let newPath = pathname;
 
+    // NOTE: This manual path mapping is required because next-intl's typed router
+    // has issues with dynamic [slug] routes. If routes change in routing.ts,
+    // these maps must be updated manually to match.
     if (locale === 'pl') {
       // Going from PL to EN: add /en prefix and translate path
       const pathMap: Record<string, string> = {
@@ -56,6 +64,7 @@ export function LanguageSwitcher() {
       variant="ghost"
       size="sm"
       onClick={toggleLocale}
+      aria-label={dictionary.accessibility.switch_language}
       className="font-medium text-muted-foreground hover:text-foreground"
     >
       <span className={locale === 'pl' ? 'text-foreground' : ''}>PL</span>
