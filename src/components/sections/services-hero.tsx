@@ -28,8 +28,11 @@ export function ServicesHero({ dictionary }: Props) {
           <h1 className="text-hero">
             {dictionary.services_page.hero.headline}
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-xl text-muted-foreground md:text-2xl">
+          <p className="mx-auto mt-4 max-w-xl text-2xl font-medium md:text-3xl">
             {dictionary.services_page.hero.subheadline}
+          </p>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+            {dictionary.services_page.hero.description}
           </p>
         </motion.div>
       </div>

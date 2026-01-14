@@ -24,6 +24,20 @@ export const caseStudies: CaseStudy[] = [
         '/images/cases/celtic/gallery-3.jpg',
       ],
     },
+    results: {
+      metrics: [
+        { value: '3x', label: { pl: 'więcej zapytań', en: 'more inquiries' } },
+        { value: '14', label: { pl: 'dni do uruchomienia', en: 'days to launch' } },
+        { value: '#1', label: { pl: 'w Google na "self storage Warszawa"', en: 'on Google for "self storage Warsaw"' } },
+      ],
+      testimonial: {
+        quote: {
+          pl: 'Strona przynosi nam stały napływ klientów. Kalkulator cen to strzał w dziesiątkę.',
+          en: 'The website brings us a steady flow of customers. The price calculator was a bulls-eye.',
+        },
+        author: 'Właściciel Celtic Self Storage',
+      },
+    },
     content: {
       about: {
         pl: 'Celtic Self Storage to nowoczesna firma oferująca wynajem magazynów samoobsługowych w Warszawie. Klienci mogą wynająć boksy o różnych rozmiarach do przechowywania mebli, dokumentów firmowych czy sezonowego sprzętu.',
@@ -84,6 +98,13 @@ export const caseStudies: CaseStudy[] = [
         '/images/cases/deluxdeco/gallery-3.jpg',
       ],
     },
+    results: {
+      metrics: [
+        { value: '+180%', label: { pl: 'wzrost ruchu organicznego', en: 'increase in organic traffic' } },
+        { value: '2.1s', label: { pl: 'czas ładowania strony', en: 'page load time' } },
+        { value: '+45%', label: { pl: 'wzrost konwersji', en: 'increase in conversions' } },
+      ],
+    },
     content: {
       about: {
         pl: 'DeluxDeco to butikowy sklep internetowy oferujący ekskluzywne dekoracje wnętrz — od designerskich świeczników po luksusowe tekstylia. Marka kieruje swoją ofertę do klientów ceniących jakość i wyjątkowy design.',
@@ -134,7 +155,7 @@ export const caseStudies: CaseStudy[] = [
     tags: ['Website', 'SEO'],
     client: 'Pałac Żółwin',
     url: 'https://palaczolwin.pl',
-    featured: false,
+    featured: true,
     order: 3,
     images: {
       cover: '/images/cases/palac-zolwin/cover.jpg',
@@ -143,6 +164,20 @@ export const caseStudies: CaseStudy[] = [
         '/images/cases/palac-zolwin/gallery-2.jpg',
         '/images/cases/palac-zolwin/gallery-3.jpg',
       ],
+    },
+    results: {
+      metrics: [
+        { value: '5x', label: { pl: 'więcej zapytań weselnych', en: 'more wedding inquiries' } },
+        { value: 'Top 3', label: { pl: 'na "sale weselne mazowieckie"', en: 'for "wedding venues mazovia"' } },
+        { value: '10k+', label: { pl: 'wyświetleń wirtualnego spaceru', en: 'virtual tour views' } },
+      ],
+      testimonial: {
+        quote: {
+          pl: 'Wirtualny spacer zmienił wszystko. Pary rezerwują terminy bez wcześniejszych odwiedzin.',
+          en: 'The virtual tour changed everything. Couples book dates without prior visits.',
+        },
+        author: 'Manager Pałacu Żółwin',
+      },
     },
     content: {
       about: {
@@ -204,6 +239,13 @@ export const caseStudies: CaseStudy[] = [
         '/images/cases/common-thread/gallery-3.jpg',
       ],
     },
+    results: {
+      metrics: [
+        { value: '60%', label: { pl: 'zapytań od architektów', en: 'inquiries from architects' } },
+        { value: '3x', label: { pl: 'więcej użytkowników konfiguratora', en: 'more configurator users' } },
+        { value: '21', label: { pl: 'dni do uruchomienia', en: 'days to launch' } },
+      ],
+    },
     content: {
       about: {
         pl: 'Common Thread to polska manufaktura specjalizująca się w produkcji luksusowych dywanów na zamówienie. Każdy dywan jest ręcznie wykonany z najwyższej jakości materiałów, a klienci mogą zaprojektować własny wzór.',
@@ -241,6 +283,147 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
   },
+  {
+    slug: 'ganda-blooms',
+    title: {
+      pl: 'Ganda Blooms',
+      en: 'Ganda Blooms',
+    },
+    description: {
+      pl: 'Strona internetowa dla kwiaciarni premium z dostawą w Warszawie',
+      en: 'Website for a premium florist with delivery in Warsaw',
+    },
+    tags: ['Website', 'E-commerce', 'SEO'],
+    client: 'Ganda Blooms',
+    url: 'https://gandablooms.pl',
+    featured: true,
+    order: 5,
+    images: {
+      cover: '/images/cases/ganda-blooms/cover.jpg',
+      gallery: [
+        '/images/cases/ganda-blooms/gallery-1.jpg',
+        '/images/cases/ganda-blooms/gallery-2.jpg',
+        '/images/cases/ganda-blooms/gallery-3.jpg',
+      ],
+    },
+    results: {
+      metrics: [
+        { value: '+320%', label: { pl: 'wzrost zamówień online', en: 'increase in online orders' } },
+        { value: '18', label: { pl: 'dni do uruchomienia', en: 'days to launch' } },
+        { value: '4.9★', label: { pl: 'średnia ocena klientów', en: 'average customer rating' } },
+      ],
+      testimonial: {
+        quote: {
+          pl: 'Nowa strona oddaje charakter naszej marki. Klienci mówią, że zamawianie to czysta przyjemność.',
+          en: 'The new website captures our brand essence. Customers say ordering is pure pleasure.',
+        },
+        author: 'Właścicielka Ganda Blooms',
+      },
+    },
+    content: {
+      about: {
+        pl: 'Ganda Blooms to warszawska kwiaciarnia specjalizująca się w autorskich kompozycjach kwiatowych i dostawie tego samego dnia. Marka stawia na świeżość, jakość i niepowtarzalny design każdego bukietu.',
+        en: 'Ganda Blooms is a Warsaw-based florist specializing in custom floral arrangements and same-day delivery. The brand focuses on freshness, quality, and unique design in every bouquet.',
+      },
+      challenge: {
+        pl: 'Kwiaciarnia działała głównie przez Instagram i telefon, co ograniczało sprzedaż. Brakowało profesjonalnej strony z możliwością zamówienia online i wyboru terminu dostawy.',
+        en: 'The florist operated mainly through Instagram and phone, limiting sales. A professional website with online ordering and delivery scheduling was missing.',
+      },
+      solution: {
+        pl: 'Stworzyliśmy elegancki sklep online z piękną prezentacją produktów, prostym procesem zamawiania i integracją z kalendarzem dostaw. Strona oddaje premium charakter marki i ułatwia zakup na każdym urządzeniu.',
+        en: 'We created an elegant online store with beautiful product presentation, simple ordering process, and delivery calendar integration. The site reflects the premium brand character and makes purchasing easy on any device.',
+      },
+      tasks: [
+        {
+          pl: 'Projekt i budowa sklepu online',
+          en: 'Design and development of online store',
+        },
+        {
+          pl: 'System wyboru daty i godziny dostawy',
+          en: 'Delivery date and time selection system',
+        },
+        {
+          pl: 'Integracja z płatnościami online',
+          en: 'Online payment integration',
+        },
+        {
+          pl: 'Optymalizacja SEO lokalna',
+          en: 'Local SEO optimization',
+        },
+        {
+          pl: 'Szkolenie z zarządzania zamówieniami',
+          en: 'Order management training',
+        },
+      ],
+    },
+  },
+  {
+    slug: 'letra',
+    title: {
+      pl: 'Letra.pl',
+      en: 'Letra.pl',
+    },
+    description: {
+      pl: 'Strona internetowa dla biura tłumaczeń specjalizującego się w dokumentach prawnych',
+      en: 'Website for a translation agency specializing in legal documents',
+    },
+    tags: ['Website', 'SEO'],
+    client: 'Letra.pl',
+    url: 'https://letra.pl',
+    featured: false,
+    order: 6,
+    images: {
+      cover: '/images/cases/letra/cover.jpg',
+      gallery: [
+        '/images/cases/letra/gallery-1.jpg',
+        '/images/cases/letra/gallery-2.jpg',
+        '/images/cases/letra/gallery-3.jpg',
+      ],
+    },
+    results: {
+      metrics: [
+        { value: 'Top 5', label: { pl: 'na "tłumaczenia prawnicze Warszawa"', en: 'for "legal translations Warsaw"' } },
+        { value: '+85%', label: { pl: 'więcej zapytań z formularza', en: 'more form inquiries' } },
+        { value: '2.4s', label: { pl: 'czas ładowania', en: 'load time' } },
+      ],
+    },
+    content: {
+      about: {
+        pl: 'Letra.pl to biuro tłumaczeń przysięgłych specjalizujące się w dokumentach prawnych i biznesowych. Obsługuje kancelarie prawne, firmy i osoby prywatne potrzebujące certyfikowanych tłumaczeń.',
+        en: 'Letra.pl is a certified translation agency specializing in legal and business documents. It serves law firms, companies, and individuals needing certified translations.',
+      },
+      challenge: {
+        pl: 'Stara strona nie wzbudzała zaufania potrzebnego w branży tłumaczeń prawniczych. Brak było jasnej prezentacji usług i certyfikacji, a konkurencja dominowała w wynikach Google.',
+        en: 'The old website did not inspire the trust needed in legal translation. Clear service presentation and certifications were missing, and competitors dominated Google results.',
+      },
+      solution: {
+        pl: 'Zaprojektowaliśmy profesjonalną stronę z wyraźną prezentacją specjalizacji, certyfikatów i procesu współpracy. Wdrożyliśmy SEO targetujące frazy związane z tłumaczeniami prawniczymi.',
+        en: 'We designed a professional website with clear presentation of specializations, certifications, and collaboration process. We implemented SEO targeting legal translation keywords.',
+      },
+      tasks: [
+        {
+          pl: 'Projekt strony budującej zaufanie',
+          en: 'Trust-building website design',
+        },
+        {
+          pl: 'Prezentacja certyfikatów i specjalizacji',
+          en: 'Certifications and specializations showcase',
+        },
+        {
+          pl: 'Formularz wyceny z uploadem dokumentów',
+          en: 'Quote form with document upload',
+        },
+        {
+          pl: 'SEO dla branży tłumaczeniowej',
+          en: 'SEO for translation industry',
+        },
+        {
+          pl: 'Integracja z Google Business Profile',
+          en: 'Google Business Profile integration',
+        },
+      ],
+    },
+  },
 ];
 
 export function getCaseStudy(slug: string): CaseStudy | undefined {
@@ -267,6 +450,20 @@ export function getLocalizedCaseStudy(slug: string, locale: Locale) {
     ...study,
     title: study.title[locale],
     description: study.description[locale],
+    results: study.results
+      ? {
+          metrics: study.results.metrics.map((m) => ({
+            value: m.value,
+            label: m.label[locale],
+          })),
+          testimonial: study.results.testimonial
+            ? {
+                quote: study.results.testimonial.quote[locale],
+                author: study.results.testimonial.author,
+              }
+            : undefined,
+        }
+      : undefined,
     content: {
       about: study.content.about[locale],
       challenge: study.content.challenge[locale],

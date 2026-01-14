@@ -49,13 +49,13 @@ export function ContactHero({ dictionary }: Props) {
           </a>
 
           <a
-            href="tel:+48123456789"
+            href={dictionary.contact.phone_href}
             className="flex items-center gap-3 text-muted-foreground transition-colors hover:text-primary"
           >
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
               <Phone className="h-5 w-5 text-primary" />
             </div>
-            <span>+48 123 456 789</span>
+            <span>{dictionary.contact.phone_number}</span>
           </a>
         </motion.div>
       </div>

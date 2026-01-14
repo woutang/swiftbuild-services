@@ -9,6 +9,21 @@ export type LocalizedString = {
   en: string;
 };
 
+export type CaseStudyMetric = {
+  value: string;
+  label: LocalizedString;
+};
+
+export type CaseStudyTestimonial = {
+  quote: LocalizedString;
+  author: string;
+};
+
+export type CaseStudyResults = {
+  metrics: CaseStudyMetric[];
+  testimonial?: CaseStudyTestimonial;
+};
+
 export type CaseStudy = {
   slug: string;
   title: LocalizedString;
@@ -22,6 +37,7 @@ export type CaseStudy = {
     cover: string;
     gallery: string[];
   };
+  results?: CaseStudyResults;
   content: {
     about: LocalizedString;
     challenge: LocalizedString;

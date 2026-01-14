@@ -22,6 +22,10 @@ export const routing = defineRouting({
       pl: '/o-nas',
       en: '/about',
     },
+    '/zespol': {
+      pl: '/zespol',
+      en: '/team',
+    },
     '/kontakt': {
       pl: '/kontakt',
       en: '/contact',

@@ -1,9 +1,7 @@
 import { setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/i18n';
-import { AboutHero } from '@/components/sections/about-hero';
-import { FounderSection } from '@/components/sections/founder-section';
-import { ValuesSection } from '@/components/sections/values-section';
+import { TeamSection } from '@/components/sections/team-section';
 import { CtaBanner } from '@/components/sections/cta-banner';
 import { PageTransition } from '@/components/providers/page-transition';
 
@@ -16,12 +14,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const dictionary = await getDictionary(locale as 'pl' | 'en');
 
   return {
-    title: dictionary.metadata.about_title,
-    description: dictionary.metadata.about_description,
+    title: dictionary.metadata.team_title,
+    description: dictionary.metadata.team_description,
   };
 }
 
-export default async function AboutPage({ params }: Props) {
+export default async function TeamPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
@@ -29,9 +27,7 @@ export default async function AboutPage({ params }: Props) {
 
   return (
     <PageTransition>
-      <AboutHero dictionary={dictionary} />
-      <FounderSection dictionary={dictionary} />
-      <ValuesSection dictionary={dictionary} />
+      <TeamSection dictionary={dictionary} />
       <CtaBanner dictionary={dictionary} />
     </PageTransition>
   );

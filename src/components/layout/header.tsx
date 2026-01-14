@@ -17,6 +17,7 @@ const navItems = [
   { href: '/uslugi', key: 'services' },
   { href: '/realizacje', key: 'portfolio' },
   { href: '/o-nas', key: 'about' },
+  { href: '/zespol', key: 'team' },
   { href: '/kontakt', key: 'contact' },
 ] as const;
 

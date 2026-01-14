@@ -90,10 +90,11 @@ export function ContactForm({ dictionary }: Props) {
             id="name"
             {...register('name')}
             aria-invalid={!!errors.name}
-            placeholder="Jan Kowalski"
+            aria-describedby={errors.name ? 'name-error' : undefined}
+            placeholder={dictionary.contact.form.placeholder_name}
           />
           {errors.name && (
-            <p className="text-sm text-destructive">{errors.name.message}</p>
+            <p id="name-error" className="text-sm text-destructive">{errors.name.message}</p>
           )}
         </div>
 
@@ -102,7 +103,7 @@ export function ContactForm({ dictionary }: Props) {
           <Input
             id="company"
             {...register('company')}
-            placeholder="Nazwa firmy"
+            placeholder={dictionary.contact.form.placeholder_company}
           />
         </div>
       </div>
@@ -116,10 +117,11 @@ export function ContactForm({ dictionary }: Props) {
             type="email"
             {...register('email')}
             aria-invalid={!!errors.email}
-            placeholder="jan@firma.pl"
+            aria-describedby={errors.email ? 'email-error' : undefined}
+            placeholder={dictionary.contact.form.placeholder_email}
           />
           {errors.email && (
-            <p className="text-sm text-destructive">{errors.email.message}</p>
+            <p id="email-error" className="text-sm text-destructive">{errors.email.message}</p>
           )}
         </div>
 
@@ -129,7 +131,7 @@ export function ContactForm({ dictionary }: Props) {
             id="phone"
             type="tel"
             {...register('phone')}
-            placeholder="+48 123 456 789"
+            placeholder={dictionary.contact.form.placeholder_phone}
           />
         </div>
       </div>
@@ -141,11 +143,12 @@ export function ContactForm({ dictionary }: Props) {
           id="message"
           {...register('message')}
           aria-invalid={!!errors.message}
-          placeholder="Opowiedz nam o swoim projekcie..."
+          aria-describedby={errors.message ? 'message-error' : undefined}
+          placeholder={dictionary.contact.form.placeholder_message}
           rows={6}
         />
         {errors.message && (
-          <p className="text-sm text-destructive">{errors.message.message}</p>
+          <p id="message-error" className="text-sm text-destructive">{errors.message.message}</p>
         )}
       </div>
 

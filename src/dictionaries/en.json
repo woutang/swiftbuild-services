@@ -8,7 +8,9 @@
     "portfolio_title": "Portfolio | SwiftBuild",
     "portfolio_description": "See our projects. Websites and marketing campaigns for Polish businesses.",
     "about_title": "About | SwiftBuild",
-    "about_description": "Meet Wouter and Karol. Two people who build websites that work.",
+    "about_description": "Meet the SwiftBuild team. We build websites that work.",
+    "team_title": "Our Team | SwiftBuild",
+    "team_description": "Meet the people behind SwiftBuild. An experienced team of developers and specialists.",
     "contact_title": "Contact | SwiftBuild",
     "contact_description": "Let's talk about your project. Free quote within 24 hours.",
     "privacy_title": "Privacy Policy | SwiftBuild",
@@ -18,6 +20,7 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "about": "About",
+    "team": "Team",
     "contact": "Contact"
   },
   "hero": {
@@ -89,10 +92,14 @@
     "view_project": "View project",
     "view_all": "View all projects",
     "back": "All projects",
+    "prev_project": "Previous project",
     "next_project": "Next project",
     "about_project": "About the project",
     "what_we_did": "What we did",
-    "visit_site": "Visit site"
+    "visit_site": "Visit site",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "featured_badge": "Featured"
   },
   "process": {
     "title": "How we work",
@@ -115,16 +122,54 @@
   },
   "about": {
     "title": "About us",
-    "intro": "We are Wouter and Karol.",
-    "description": "We build websites that work. We're not a big agency with a conference room and account manager. We're two people who get things done.",
-    "contact_line": "You call — Karol answers. Something breaks — Wouter fixes it. No passing between departments. No waiting for \"team response\".",
-    "karol": {
-      "role": "Your contact",
-      "bio": "Business Analyst at Colliers. Will understand your business and take care of every detail."
+    "story_badge": "Our Story",
+    "story_headline": "We Built SwiftBuild Because We Were Frustrated",
+    "story_intro": "We both had the same realization: Most businesses are being held back by their own digital presence.",
+    "story_frustration_title": "It's 2026. Yet we still visit websites that:",
+    "story_frustrations": [
+      "Take 8 seconds to load",
+      "Hide the contact button behind three menus",
+      "Look like every other WordPress or WooCommerce template",
+      "Work terribly on mobile (where 70% of traffic comes from)"
+    ],
+    "story_feeling": "We get genuinely frustrated when this happens. Not just as developers—as customers. When a website makes it hard to buy, we don't buy. We leave. And so do your customers.",
+    "story_premise": "So we started SwiftBuild with a simple premise:",
+    "story_mission": "Your website should be your best salesperson.",
+    "story_mission_detail": "It should work 24/7, never get tired, never forget the pitch, and never make customers feel stupid for trying to give you money.",
+    "story_conclusion": "We're not here to build you a \"nice website.\" We're here to build something that actually grows your business.",
+    "founders": {
+      "title": "The Team",
+      "wouter": {
+        "name": "Wouter Van Muylem",
+        "role": "Co-founder & Technical Lead",
+        "bio": "Spent years at companies where technology was an afterthought. Legacy systems. Repetitive tasks that should have been automated. Tools that fought against productivity instead of enabling it. Now builds the websites he wished existed.",
+        "background": "Former developer at enterprise companies"
+      },
+      "karol": {
+        "name": "Karol Rejf",
+        "role": "Co-founder & Project Manager",
+        "bio": "Watched businesses struggle with websites that actively worked against them—slow, confusing, impossible to update. Sites that cost thousands but converted nobody. Now ensures every SwiftBuild project delivers real results.",
+        "background": "Former Business Analyst at Colliers"
+      }
     },
-    "wouter": {
-      "role": "Builds",
-      "bio": "Senior developer with experience in e-commerce, AI and web applications. Your site in good hands."
+    "differentiators": {
+      "title": "What Makes Us Different",
+      "speed": {
+        "title": "Speed",
+        "description": "2-3 week turnaround. Not 2-3 months. We move fast because we've done this before and we don't waste time on process theater."
+      },
+      "design": {
+        "title": "Design That Wows",
+        "description": "We work hard to create that \"wow\" feeling. No templates. No generic layouts. Your site should make competitors jealous."
+      },
+      "understanding": {
+        "title": "Deep Understanding",
+        "description": "We do deep dives into your industry. We don't just execute—we become part of your company and think about the value we can create."
+      },
+      "conversion": {
+        "title": "Conversion Focus",
+        "description": "A beautiful website that doesn't convert is worthless. We build revenue engines, not digital brochures."
+      }
     },
     "why_us": {
       "title": "Why us?",
@@ -142,9 +187,43 @@
       }
     }
   },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "The people behind your projects",
+    "intro": "A small but tight-knit team with experience building websites for Polish businesses.",
+    "members": {
+      "karol": {
+        "name": "Karol Rejf",
+        "role": "Founder & Project Manager",
+        "bio": "Your main contact. Former Business Analyst at Colliers. Takes care of every project detail and keeps things on schedule."
+      },
+      "tomasz": {
+        "name": "Tomek Górski",
+        "role": "Tech Lead",
+        "bio": "10+ years of web development experience. Solution architect and team mentor. Specialist in performance and technical SEO."
+      },
+      "anna": {
+        "name": "Ania Bernat",
+        "role": "Senior Frontend Developer",
+        "bio": "React and Next.js expert. Creates responsive interfaces that look great on every device."
+      },
+      "mateusz": {
+        "name": "Maciek Stec",
+        "role": "Frontend Developer",
+        "bio": "Animation and micro-interaction specialist. Turns design mockups into living, interactive websites."
+      },
+      "piotr": {
+        "name": "Bartek Lis",
+        "role": "Backend Developer",
+        "bio": "Builds solid backends and integrations. Expert in databases, APIs, and automation."
+      }
+    }
+  },
   "contact": {
     "title": "Let's talk",
     "subtitle": "We'll respond within 24 hours.",
+    "phone_number": "+48 123 456 789",
+    "phone_href": "tel:+48123456789",
     "form": {
       "name": "Name",
       "company": "Company",
@@ -154,7 +233,12 @@
       "submit": "Send message",
       "sending": "Sending...",
       "success": "Thanks! We'll get back to you faster than you think.",
-      "error": "Something went wrong. Please try again."
+      "error": "Something went wrong. Please try again.",
+      "placeholder_name": "John Smith",
+      "placeholder_company": "Company name",
+      "placeholder_email": "john@company.com",
+      "placeholder_phone": "+48 123 456 789",
+      "placeholder_message": "Tell us about your project..."
     },
     "or": "Or book a call",
     "book_call": "Book a time"
@@ -164,9 +248,7 @@
     "privacy": "Privacy policy",
     "rights": "All rights reserved",
     "menu_label": "Menu",
-    "email": "karol@swiftbuild.services",
-    "linkedin_url": "https://linkedin.com/company/swiftbuild",
-    "linkedin_label": "LinkedIn"
+    "email": "karol@swiftbuild.services"
   },
   "accessibility": {
     "open_menu": "Open menu",
@@ -179,83 +261,207 @@
   "services_page": {
     "hero": {
       "headline": "Services",
-      "subheadline": "Website, SEO and ads. Everything you need in one place."
+      "subheadline": "Websites that convert. Growth that lasts.",
+      "description": "We build websites that actually bring you business. Then we help you grow with SEO and ads—all under one roof."
     },
-    "website_detail": {
-      "title": "Websites",
-      "intro": "Modern websites that attract customers and sell.",
-      "what_you_get": "What you get",
-      "features": [
-        "Custom design tailored to your brand",
-        "Responsive design that works on all devices",
-        "Speed optimization — loads in under 3 seconds",
-        "Basic SEO optimization included",
-        "Admin panel for self-editing content",
-        "SSL certificate and secure hosting"
-      ],
-      "process": "How it works",
-      "process_steps": [
-        "Brief and understanding your business",
-        "Design mockup for approval",
-        "Building the site with preview access",
-        "Testing and revisions",
-        "Launch and training"
-      ]
+    "tiers": {
+      "title": "Choose Your Path",
+      "subtitle": "Clear pricing. No hidden fees. Real results.",
+      "one_time": "One-time",
+      "monthly": "Monthly",
+      "popular": "Most Popular",
+      "minimum_commitment": "6-month minimum commitment",
+      "ad_spend_separate": "Ad spend is separate",
+      "website": {
+        "title": "Website",
+        "subtitle": "Websites built to convert visitors into customers",
+        "description": "Modern, fast, conversion-optimized website that works 24/7 as your best salesperson.",
+        "price": "from 8,000 PLN",
+        "features": [
+          "Custom design tailored to your brand",
+          "Mobile-first, responsive on all devices",
+          "Speed optimized (loads in under 3 seconds)",
+          "SEO foundations built in",
+          "Clear calls-to-action on every page",
+          "Contact forms that work (and notify you instantly)",
+          "Admin panel for self-editing",
+          "Launch support and training"
+        ],
+        "timeline": "Ready in 2-3 weeks"
+      },
+      "starter": {
+        "title": "Starter",
+        "subtitle": "Website maintenance",
+        "description": "Keep your website secure, updated, and running smoothly.",
+        "price": "800-1,200 PLN",
+        "price_suffix": "/month",
+        "features": [
+          "Security updates and monitoring",
+          "Hosting management",
+          "Small content changes (2 hrs/month)",
+          "Monthly performance check",
+          "Email support"
+        ]
+      },
+      "growth": {
+        "title": "Growth",
+        "subtitle": "Maintenance + SEO",
+        "description": "Everything in Starter plus active SEO to grow your organic traffic.",
+        "price": "2,500-3,500 PLN",
+        "price_suffix": "/month",
+        "features": [
+          "Everything in Starter",
+          "Full SEO optimization",
+          "Keyword research and tracking",
+          "On-page optimization",
+          "Monthly SEO reports with rankings",
+          "4 hours of changes/month",
+          "Priority support"
+        ]
+      },
+      "scale": {
+        "title": "Scale",
+        "subtitle": "Maintenance + SEO + Google Ads",
+        "description": "The complete package. Website, SEO, and paid advertising managed together.",
+        "price": "4,500-6,000 PLN",
+        "price_suffix": "/month",
+        "features": [
+          "Everything in Growth",
+          "Google Ads campaign management",
+          "Ad copywriting and optimization",
+          "Conversion tracking setup",
+          "A/B testing",
+          "Bi-weekly strategy calls",
+          "Dedicated account manager"
+        ],
+        "note": "Minimum 3,000 PLN/month ad budget required"
+      }
     },
-    "seo_detail": {
-      "title": "SEO",
-      "intro": "Be visible where your customers are searching.",
-      "what_you_get": "What you get",
-      "features": [
-        "Full technical audit of your site",
-        "Competitor and keyword analysis",
-        "On-page optimization (titles, descriptions, headings)",
-        "Link building",
-        "Monthly reports with visibility and rankings",
-        "Content marketing recommendations"
-      ],
-      "timeline_note": "SEO is a marathon, not a sprint. Expect first results after 3-6 months of consistent work."
+    "apps": {
+      "title": "Digital Products & Apps",
+      "subtitle": "For businesses ready to build something bigger",
+      "prototype": {
+        "title": "Clickable Prototype",
+        "description": "Interactive design you can test with real users. Perfect for validating ideas before investing in development.",
+        "price": "from 5,000 PLN"
+      },
+      "mvp": {
+        "title": "MVP",
+        "description": "A working web or mobile app with core features. Enough to launch, get users, and prove your concept.",
+        "price": "from 25,000 PLN"
+      },
+      "full": {
+        "title": "Full Product Development",
+        "description": "Complete application built to scale. Custom pricing based on scope.",
+        "price": "Let's talk"
+      },
+      "maintenance_note": "After launch: Monthly maintenance and improvement budgets starting from 3,000 PLN/month."
     },
-    "ads_detail": {
-      "title": "Google Ads",
-      "intro": "Ads that reach the right people at the right time.",
-      "what_you_get": "What you get",
-      "features": [
-        "Campaign strategy tailored to your goals",
-        "Creating and optimizing text ads",
-        "Remarketing — reach visitors again",
-        "A/B testing for maximum effectiveness",
-        "Bid and budget optimization",
-        "Weekly reports and monthly summaries"
+    "process": {
+      "badge": "Our Process",
+      "title": "See Your New Website Before You Pay a Zloty",
+      "subtitle": "Most web agencies start with endless meetings and questionnaires. We start differently. We show you what's possible first.",
+      "steps": [
+        {
+          "title": "We Analyze Your Current Site",
+          "subtitle": "Before we even talk",
+          "description": "We dive deep into your existing website—what's working, what's not, and what opportunities you're missing.",
+          "result": "A clear picture of your starting point and potential."
+        },
+        {
+          "title": "We Build You a Preview",
+          "subtitle": "This is where we're different",
+          "description": "Before any discovery calls or detailed discussions, we create a working preview of your new website. Not a flat design mockup—an actual clickable prototype you can explore on your phone or computer.",
+          "result": "A real preview you can share with your team, click through, and imagine as your new site."
+        },
+        {
+          "title": "Discovery Call",
+          "subtitle": "Now we dive deeper",
+          "description": "With the preview in hand, we have a focused conversation about your business, goals, and vision. You'll tell us what you love, what you'd change, and share examples of sites that inspire you.",
+          "result": "The confidence that we truly understand your needs."
+        },
+        {
+          "title": "Design & Proposal",
+          "subtitle": "Everything documented",
+          "description": "We create a unified design direction based on your feedback and references, then deliver a clear proposal with scope, timeline, and pricing. No surprises, no hidden costs.",
+          "result": "A detailed roadmap and transparent pricing."
+        },
+        {
+          "title": "We Build It",
+          "subtitle": "Professional execution",
+          "description": "Our team builds your website with modern technology, optimized for speed, mobile devices, and search engines. You'll review progress and provide feedback throughout.",
+          "result": "A website that performs as good as it looks."
+        },
+        {
+          "title": "Launch & Support",
+          "subtitle": "Go live with confidence",
+          "description": "We handle the technical launch, set up analytics, and train you on managing your new site. Plus ongoing support to ensure everything runs smoothly.",
+          "result": "A live website and the knowledge to maintain it."
+        }
       ],
-      "budget_note": "Add advertising budget to management cost. We recommend minimum 2000 PLN monthly."
+      "comparison": {
+        "title": "Why This Approach Works",
+        "traditional": "Traditional Agencies",
+        "swiftbuild": "SwiftBuild",
+        "rows": [
+          {
+            "traditional": "\"Tell us what you want\"",
+            "swiftbuild": "\"Here's what we built for you\""
+          },
+          {
+            "traditional": "Weeks of meetings before seeing anything",
+            "swiftbuild": "Preview in days"
+          },
+          {
+            "traditional": "Generic proposals",
+            "swiftbuild": "Customized to your business"
+          },
+          {
+            "traditional": "You imagine the result",
+            "swiftbuild": "You experience the result"
+          },
+          {
+            "traditional": "\"Trust our portfolio\"",
+            "swiftbuild": "\"Here's YOUR site, live\""
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to See What's Possible?",
+        "description": "Share your website URL with us. Within days, you'll have a professional analysis and a clickable preview of your new site—before any commitment.",
+        "button": "Get Your Free Preview"
+      }
     },
     "faq": {
-      "title": "Frequently asked questions",
+      "title": "Frequently Asked Questions",
       "questions": [
         {
+          "q": "How long does the whole process take?",
+          "a": "Most projects launch within 3-4 weeks from signed proposal. The initial preview? You'll see that within days of first contact."
+        },
+        {
+          "q": "What if I don't like the preview?",
+          "a": "The preview is meant to start a conversation, not end one. Your feedback shapes the final design. Most clients love seeing possibilities they hadn't imagined."
+        },
+        {
           "q": "How much does a website cost?",
-          "a": "Prices start from 8000 PLN for a business card website. Exact pricing depends on project scope — number of pages, features and integrations. We'll quote your project for free."
+          "a": "Websites start from 8,000 PLN. Exact pricing depends on project scope—number of pages, features and integrations. You'll know the exact price before committing."
         },
         {
-          "q": "How long does it take to build a website?",
-          "a": "A standard business website takes 2-3 weeks from design approval. More complex projects may take 4-6 weeks."
+          "q": "What technology do you use?",
+          "a": "We build with modern frameworks (Next.js) that deliver fast, secure, and SEO-friendly websites. But you don't need to worry about the tech—we handle all of that."
         },
         {
-          "q": "Can I edit the website myself?",
-          "a": "Yes, we provide an admin panel and train you on how to use it. You'll be able to change texts, photos and add new content yourself."
+          "q": "Do you work with businesses outside Poland?",
+          "a": "Yes! While we specialize in Polish SMBs, we work with businesses across Europe. All communication can be in English or Polish."
         },
         {
-          "q": "When will I see SEO results?",
-          "a": "First visible results appear after 3-6 months. SEO is a long-term investment, but it brings stable and growing results."
+          "q": "What's included in the price?",
+          "a": "Everything: design, development, mobile optimization, basic SEO setup, analytics integration, launch support, and training. No hidden fees."
         },
         {
-          "q": "What budget do I need for Google Ads?",
-          "a": "We recommend minimum 2000 PLN monthly for the ad budget alone. Management cost is additional. Smaller budgets are possible, but results will be proportionally smaller."
-        },
-        {
-          "q": "Do you sign long-term contracts?",
-          "a": "For SEO and Google Ads we recommend minimum 6 months to see real results. But we don't lock in clients — if you're not satisfied, you can leave with one month notice."
+          "q": "Do you require long-term contracts?",
+          "a": "For monthly services (SEO, ads), we recommend a minimum 6-month commitment to see real results. But we don't lock you in—you can leave with one month notice if you're not satisfied."
         }
       ]
     }

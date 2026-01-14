@@ -65,6 +65,7 @@ export function FeaturedWork({ dictionary, caseStudies }: Props) {
             >
               <Link
                 href={{ pathname: '/realizacje/[slug]', params: { slug: study.slug } }}
+                data-cursor="view"
                 className="group relative block overflow-hidden rounded-2xl border border-border/50 bg-card transition-all duration-500 hover:border-primary/30"
               >
                 {/* Image container */}

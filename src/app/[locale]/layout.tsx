@@ -7,6 +7,7 @@ import { getDictionary } from '@/lib/i18n';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { SmoothScrollProvider } from '@/components/providers/smooth-scroll-provider';
+import { CustomCursor } from '@/components/ui/custom-cursor';
 import '../globals.css';
 
 type Props = {
@@ -113,6 +114,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body>
         <NextIntlClientProvider messages={messages}>
           <SmoothScrollProvider>
+            <CustomCursor />
             <Header dictionary={dictionary} />
             <main className="min-h-screen pt-24">{children}</main>
             <Footer dictionary={dictionary} />

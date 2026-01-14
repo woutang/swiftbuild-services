@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Check } from 'lucide-react';
+import { Check, Quote } from 'lucide-react';
 import type { Dictionary } from '@/types';
 
 type LocalizedCaseStudy = {
@@ -16,6 +16,13 @@ type LocalizedCaseStudy = {
   images: {
     cover: string;
     gallery: string[];
+  };
+  results?: {
+    metrics: { value: string; label: string }[];
+    testimonial?: {
+      quote: string;
+      author: string;
+    };
   };
   content: {
     about: string;
@@ -39,11 +46,44 @@ export function CaseStudyContent({ dictionary, caseStudy }: Props) {
   return (
     <section ref={ref} className="py-16 md:py-24">
       <div className="mx-auto max-w-4xl px-6 md:px-12">
+        {/* Results metrics */}
+        {caseStudy.results && caseStudy.results.metrics.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, ease: easeOutExpo }}
+            className="mb-16"
+          >
+            <div className="grid gap-4 sm:grid-cols-3">
+              {caseStudy.results.metrics.map((metric, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                    ease: easeOutExpo,
+                  }}
+                  className="rounded-2xl border border-primary/20 bg-primary/5 p-6 text-center"
+                >
+                  <div className="text-3xl font-bold text-primary md:text-4xl">
+                    {metric.value}
+                  </div>
+                  <div className="mt-2 text-sm text-muted-foreground">
+                    {metric.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+
         {/* About */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: easeOutExpo }}
+          transition={{ duration: 0.6, delay: 0.1, ease: easeOutExpo }}
           className="mb-16"
         >
           <h2 className="mb-6 text-2xl font-bold md:text-3xl">
@@ -59,10 +99,10 @@ export function CaseStudyContent({ dictionary, caseStudy }: Props) {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1, ease: easeOutExpo }}
+            transition={{ duration: 0.6, delay: 0.2, ease: easeOutExpo }}
           >
             <div className="mb-4 inline-block rounded-lg bg-destructive/10 px-3 py-1 text-sm font-medium text-destructive">
-              Challenge
+              {dictionary.portfolio.challenge}
             </div>
             <p className="leading-relaxed text-muted-foreground">
               {caseStudy.content.challenge}
@@ -72,10 +112,10 @@ export function CaseStudyContent({ dictionary, caseStudy }: Props) {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2, ease: easeOutExpo }}
+            transition={{ duration: 0.6, delay: 0.3, ease: easeOutExpo }}
           >
             <div className="mb-4 inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
-              Solution
+              {dictionary.portfolio.solution}
             </div>
             <p className="leading-relaxed text-muted-foreground">
               {caseStudy.content.solution}
@@ -83,11 +123,33 @@ export function CaseStudyContent({ dictionary, caseStudy }: Props) {
           </motion.div>
         </div>
 
+        {/* Testimonial */}
+        {caseStudy.results?.testimonial && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.35, ease: easeOutExpo }}
+            className="mb-16"
+          >
+            <div className="relative rounded-2xl border border-border/50 bg-card p-8 md:p-10">
+              <Quote className="absolute left-6 top-6 h-8 w-8 text-primary/20" />
+              <blockquote className="relative z-10">
+                <p className="text-lg italic text-foreground md:text-xl">
+                  &ldquo;{caseStudy.results.testimonial.quote}&rdquo;
+                </p>
+                <footer className="mt-4 text-sm text-muted-foreground">
+                  — {caseStudy.results.testimonial.author}
+                </footer>
+              </blockquote>
+            </div>
+          </motion.div>
+        )}
+
         {/* What we did */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3, ease: easeOutExpo }}
+          transition={{ duration: 0.6, delay: 0.4, ease: easeOutExpo }}
         >
           <h2 className="mb-8 text-2xl font-bold md:text-3xl">
             {dictionary.portfolio.what_we_did}
@@ -101,7 +163,7 @@ export function CaseStudyContent({ dictionary, caseStudy }: Props) {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{
                   duration: 0.5,
-                  delay: 0.4 + index * 0.1,
+                  delay: 0.5 + index * 0.1,
                   ease: easeOutExpo,
                 }}
                 className="flex items-start gap-3 rounded-lg border border-border/50 bg-card/50 p-4"
@@ -119,7 +181,7 @@ export function CaseStudyContent({ dictionary, caseStudy }: Props) {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5, ease: easeOutExpo }}
+          transition={{ duration: 0.6, delay: 0.6, ease: easeOutExpo }}
           className="mt-16"
         >
           <div className="grid gap-4 md:grid-cols-3">

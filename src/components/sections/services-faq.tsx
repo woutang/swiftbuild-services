@@ -48,6 +48,8 @@ export function ServicesFaq({ dictionary }: Props) {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
                 className="group flex w-full items-start justify-between gap-4 rounded-xl border border-border/50 bg-card/50 p-6 text-left transition-colors hover:border-primary/30 hover:bg-card"
               >
                 <span className="text-lg font-medium">{item.q}</span>
@@ -55,11 +57,13 @@ export function ServicesFaq({ dictionary }: Props) {
                   className={`mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
+                  aria-hidden="true"
                 />
               </button>
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div
+                    id={`faq-answer-${index}`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}

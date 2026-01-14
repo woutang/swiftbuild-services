@@ -8,7 +8,9 @@
     "portfolio_title": "Realizacje | SwiftBuild",
     "portfolio_description": "Zobacz nasze projekty. Strony internetowe i kampanie marketingowe dla polskich firm.",
     "about_title": "O nas | SwiftBuild",
-    "about_description": "Poznaj Wouter i Karol. Dwóch ludzi, którzy budują strony internetowe, które działają.",
+    "about_description": "Poznaj zespół SwiftBuild. Tworzymy strony internetowe, które działają.",
+    "team_title": "Nasz zespół | SwiftBuild",
+    "team_description": "Poznaj ludzi, którzy stoją za SwiftBuild. Doświadczony zespół developerów i specjalistów.",
     "contact_title": "Kontakt | SwiftBuild",
     "contact_description": "Porozmawiajmy o Twoim projekcie. Bezpłatna wycena w 24 godziny.",
     "privacy_title": "Polityka prywatności | SwiftBuild",
@@ -18,6 +20,7 @@
     "services": "Usługi",
     "portfolio": "Realizacje",
     "about": "O nas",
+    "team": "Zespół",
     "contact": "Kontakt"
   },
   "hero": {
@@ -89,10 +92,14 @@
     "view_project": "Zobacz projekt",
     "view_all": "Zobacz wszystkie realizacje",
     "back": "Wszystkie realizacje",
+    "prev_project": "Poprzedni projekt",
     "next_project": "Następny projekt",
     "about_project": "O projekcie",
     "what_we_did": "Co zrobiliśmy",
-    "visit_site": "Odwiedź stronę"
+    "visit_site": "Odwiedź stronę",
+    "challenge": "Wyzwanie",
+    "solution": "Rozwiązanie",
+    "featured_badge": "Wyróżnione"
   },
   "process": {
     "title": "Jak działamy",
@@ -115,16 +122,54 @@
   },
   "about": {
     "title": "O nas",
-    "intro": "Jesteśmy Wouter i Karol.",
-    "description": "Budujemy strony internetowe, które działają. Nie jesteśmy wielką agencją z salą konferencyjną i account managerem. Jesteśmy dwójką ludzi, którzy robią konkretną robotę.",
-    "contact_line": "Ty dzwonisz — Karol odbiera. Coś nie działa — Wouter naprawia. Bez przekazywania między działami. Bez czekania na \"odpowiedź zespołu\".",
-    "karol": {
-      "role": "Twój kontakt",
-      "bio": "Business Analyst w Colliers. Zrozumie Twój biznes i zadba o każdy szczegół współpracy."
+    "story_badge": "Nasza Historia",
+    "story_headline": "Założyliśmy SwiftBuild, bo byliśmy sfrustrowani",
+    "story_intro": "Obaj doszliśmy do tego samego wniosku: większość firm jest hamowana przez własną obecność w sieci.",
+    "story_frustration_title": "Jest 2026 rok. A my wciąż odwiedzamy strony, które:",
+    "story_frustrations": [
+      "Ładują się 8 sekund",
+      "Chowają przycisk kontaktu za trzema menu",
+      "Wyglądają jak każdy inny szablon WordPress czy WooCommerce",
+      "Działają fatalnie na telefonie (skąd pochodzi 70% ruchu)"
+    ],
+    "story_feeling": "Naprawdę nas to frustruje. Nie tylko jako developerów—jako klientów. Kiedy strona utrudnia zakup, nie kupujemy. Wychodzimy. I Twoi klienci też.",
+    "story_premise": "Dlatego założyliśmy SwiftBuild z prostym założeniem:",
+    "story_mission": "Twoja strona powinna być Twoim najlepszym sprzedawcą.",
+    "story_mission_detail": "Powinna pracować 24/7, nigdy się nie męczyć, nigdy nie zapominać argumentów i nigdy nie sprawiać, że klienci czują się głupio, próbując dać Ci pieniądze.",
+    "story_conclusion": "Nie jesteśmy tu, żeby zbudować Ci \"ładną stronę\". Jesteśmy tu, żeby zbudować coś, co faktycznie rozwinie Twój biznes.",
+    "founders": {
+      "title": "Zespół",
+      "wouter": {
+        "name": "Wouter Van Muylem",
+        "role": "Współzałożyciel & Technical Lead",
+        "bio": "Spędził lata w firmach, gdzie technologia była drugorzędna. Legacy systemy. Powtarzalne zadania, które powinny być zautomatyzowane. Narzędzia, które przeszkadzały zamiast pomagać. Teraz buduje strony, jakie sam chciałby mieć.",
+        "background": "Były developer w korporacjach"
+      },
+      "karol": {
+        "name": "Karol Rejf",
+        "role": "Współzałożyciel & Project Manager",
+        "bio": "Obserwował firmy zmagające się ze stronami, które aktywnie im przeszkadzały—wolne, mylące, niemożliwe do aktualizacji. Strony za tysiące złotych, które nikogo nie przekonywały. Teraz dba o to, by każdy projekt SwiftBuild przynosił realne rezultaty.",
+        "background": "Były Business Analyst w Colliers"
+      }
     },
-    "wouter": {
-      "role": "Buduje",
-      "bio": "Senior developer z doświadczeniem w e-commerce, AI i aplikacjach webowych. Twoja strona w dobrych rękach."
+    "differentiators": {
+      "title": "Co nas wyróżnia",
+      "speed": {
+        "title": "Szybkość",
+        "description": "2-3 tygodnie, nie 2-3 miesiące. Działamy szybko, bo robiliśmy to już wielokrotnie i nie tracimy czasu na teatr procesowy."
+      },
+      "design": {
+        "title": "Design, który zachwyca",
+        "description": "Pracujemy ciężko, żeby wywołać efekt \"wow\". Żadnych szablonów. Żadnych generycznych layoutów. Twoja strona ma wywoływać zazdrość u konkurencji."
+      },
+      "understanding": {
+        "title": "Głębokie zrozumienie",
+        "description": "Robimy deep dive w Twoją branżę. Nie tylko wykonujemy—stajemy się częścią Twojej firmy i myślimy o wartości, którą możemy stworzyć."
+      },
+      "conversion": {
+        "title": "Fokus na konwersję",
+        "description": "Piękna strona, która nie konwertuje, jest bezwartościowa. Budujemy silniki przychodów, nie cyfrowe broszury."
+      }
     },
     "why_us": {
       "title": "Dlaczego my?",
@@ -142,9 +187,43 @@
       }
     }
   },
+  "team": {
+    "title": "Nasz zespół",
+    "subtitle": "Ludzie, którzy tworzą Twoje projekty",
+    "intro": "Mały, ale zgrany zespół z doświadczeniem w tworzeniu stron dla polskich firm.",
+    "members": {
+      "karol": {
+        "name": "Karol Rejf",
+        "role": "Założyciel & Project Manager",
+        "bio": "Twój główny kontakt. Były Business Analyst w Colliers. Dba o każdy szczegół projektu i pilnuje terminów."
+      },
+      "tomasz": {
+        "name": "Tomek Górski",
+        "role": "Tech Lead",
+        "bio": "10+ lat doświadczenia w web development. Architekt rozwiązań i mentor zespołu. Specjalista od wydajności i SEO technicznego."
+      },
+      "anna": {
+        "name": "Ania Bernat",
+        "role": "Senior Frontend Developer",
+        "bio": "Ekspertka od React i Next.js. Tworzy responsywne interfejsy, które wyglądają świetnie na każdym urządzeniu."
+      },
+      "mateusz": {
+        "name": "Maciek Stec",
+        "role": "Frontend Developer",
+        "bio": "Specjalista od animacji i micro-interactions. Zamienia projekty graficzne w żywe, interaktywne strony."
+      },
+      "piotr": {
+        "name": "Bartek Lis",
+        "role": "Backend Developer",
+        "bio": "Buduje solidne backendy i integracje. Ekspert od baz danych, API i automatyzacji."
+      }
+    }
+  },
   "contact": {
     "title": "Porozmawiajmy",
     "subtitle": "Odpowiemy w ciągu 24 godzin.",
+    "phone_number": "+48 123 456 789",
+    "phone_href": "tel:+48123456789",
     "form": {
       "name": "Imię",
       "company": "Firma",
@@ -154,7 +233,12 @@
       "submit": "Wyślij wiadomość",
       "sending": "Wysyłanie...",
       "success": "Dzięki! Odezwiemy się szybciej niż myślisz.",
-      "error": "Coś poszło nie tak. Spróbuj ponownie."
+      "error": "Coś poszło nie tak. Spróbuj ponownie.",
+      "placeholder_name": "Jan Kowalski",
+      "placeholder_company": "Nazwa firmy",
+      "placeholder_email": "jan@firma.pl",
+      "placeholder_phone": "+48 123 456 789",
+      "placeholder_message": "Opowiedz nam o swoim projekcie..."
     },
     "or": "Lub umów się na rozmowę",
     "book_call": "Zarezerwuj termin"
@@ -164,9 +248,7 @@
     "privacy": "Polityka prywatności",
     "rights": "Wszelkie prawa zastrzeżone",
     "menu_label": "Menu",
-    "email": "karol@swiftbuild.services",
-    "linkedin_url": "https://linkedin.com/company/swiftbuild",
-    "linkedin_label": "LinkedIn"
+    "email": "karol@swiftbuild.services"
   },
   "accessibility": {
     "open_menu": "Otwórz menu",
@@ -179,83 +261,207 @@
   "services_page": {
     "hero": {
       "headline": "Usługi",
-      "subheadline": "Strona, SEO i reklamy. Wszystko czego potrzebujesz w jednym miejscu."
+      "subheadline": "Strony, które konwertują. Wzrost, który trwa.",
+      "description": "Budujemy strony, które faktycznie przynoszą Ci biznes. Potem pomagamy Ci rosnąć przez SEO i reklamy—wszystko pod jednym dachem."
     },
-    "website_detail": {
-      "title": "Strony internetowe",
-      "intro": "Nowoczesne strony, które przyciągają klientów i sprzedają.",
-      "what_you_get": "Co dostajesz",
-      "features": [
-        "Indywidualny projekt dopasowany do Twojej marki",
-        "Responsywny design działający na wszystkich urządzeniach",
-        "Optymalizacja szybkości — strona ładuje się w mniej niż 3 sekundy",
-        "Podstawowa optymalizacja SEO w cenie",
-        "Panel administracyjny do samodzielnej edycji treści",
-        "Certyfikat SSL i bezpieczny hosting"
-      ],
-      "process": "Jak to wygląda",
-      "process_steps": [
-        "Brief i zrozumienie Twojego biznesu",
-        "Projekt graficzny do akceptacji",
-        "Budowa strony z możliwością podglądu",
-        "Testy i poprawki",
-        "Uruchomienie i szkolenie z obsługi"
-      ]
+    "tiers": {
+      "title": "Wybierz swoją ścieżkę",
+      "subtitle": "Jasne ceny. Bez ukrytych opłat. Realne wyniki.",
+      "one_time": "Jednorazowo",
+      "monthly": "Miesięcznie",
+      "popular": "Najpopularniejszy",
+      "minimum_commitment": "Minimum 6 miesięcy współpracy",
+      "ad_spend_separate": "Budżet reklamowy osobno",
+      "website": {
+        "title": "Strona internetowa",
+        "subtitle": "Strony zbudowane, by zamieniać odwiedzających w klientów",
+        "description": "Nowoczesna, szybka strona zoptymalizowana pod konwersję, która pracuje 24/7 jako Twój najlepszy sprzedawca.",
+        "price": "od 8 000 PLN",
+        "features": [
+          "Indywidualny design dopasowany do Twojej marki",
+          "Mobile-first, responsywność na wszystkich urządzeniach",
+          "Zoptymalizowana szybkość (ładowanie poniżej 3 sekund)",
+          "Fundamenty SEO wbudowane od startu",
+          "Wyraźne wezwania do działania na każdej stronie",
+          "Formularze kontaktowe, które działają (i natychmiast powiadamiają)",
+          "Panel administracyjny do samodzielnej edycji",
+          "Wsparcie przy uruchomieniu i szkolenie"
+        ],
+        "timeline": "Gotowe w 2-3 tygodnie"
+      },
+      "starter": {
+        "title": "Starter",
+        "subtitle": "Utrzymanie strony",
+        "description": "Utrzymaj swoją stronę bezpieczną, zaktualizowaną i sprawnie działającą.",
+        "price": "800-1 200 PLN",
+        "price_suffix": "/mies.",
+        "features": [
+          "Aktualizacje bezpieczeństwa i monitoring",
+          "Zarządzanie hostingiem",
+          "Drobne zmiany treści (2 godz./mies.)",
+          "Miesięczny przegląd wydajności",
+          "Wsparcie mailowe"
+        ]
+      },
+      "growth": {
+        "title": "Growth",
+        "subtitle": "Utrzymanie + SEO",
+        "description": "Wszystko ze Startera plus aktywne SEO, żeby rozwijać Twój ruch organiczny.",
+        "price": "2 500-3 500 PLN",
+        "price_suffix": "/mies.",
+        "features": [
+          "Wszystko ze Startera",
+          "Pełna optymalizacja SEO",
+          "Badanie i śledzenie słów kluczowych",
+          "Optymalizacja on-page",
+          "Miesięczne raporty SEO z pozycjami",
+          "4 godziny zmian/mies.",
+          "Priorytetowe wsparcie"
+        ]
+      },
+      "scale": {
+        "title": "Scale",
+        "subtitle": "Utrzymanie + SEO + Google Ads",
+        "description": "Kompletny pakiet. Strona, SEO i płatne reklamy zarządzane razem.",
+        "price": "4 500-6 000 PLN",
+        "price_suffix": "/mies.",
+        "features": [
+          "Wszystko z Growth",
+          "Zarządzanie kampaniami Google Ads",
+          "Copywriting i optymalizacja reklam",
+          "Konfiguracja śledzenia konwersji",
+          "Testy A/B",
+          "Rozmowy strategiczne co 2 tygodnie",
+          "Dedykowany opiekun konta"
+        ],
+        "note": "Wymagany minimalny budżet reklamowy 3 000 PLN/mies."
+      }
     },
-    "seo_detail": {
-      "title": "Pozycjonowanie SEO",
-      "intro": "Bądź widoczny tam, gdzie szukają Twoi klienci.",
-      "what_you_get": "Co dostajesz",
-      "features": [
-        "Pełny audyt techniczny strony",
-        "Analiza konkurencji i słów kluczowych",
-        "Optymalizacja on-page (tytuły, opisy, nagłówki)",
-        "Budowa profilu linków",
-        "Miesięczne raporty z widocznością i pozycjami",
-        "Rekomendacje content marketingowe"
-      ],
-      "timeline_note": "SEO to maraton, nie sprint. Pierwsze efekty zobaczysz po 3-6 miesiącach systematycznej pracy."
+    "apps": {
+      "title": "Produkty cyfrowe i aplikacje",
+      "subtitle": "Dla firm gotowych zbudować coś większego",
+      "prototype": {
+        "title": "Klikalny prototyp",
+        "description": "Interaktywny design, który możesz przetestować z prawdziwymi użytkownikami. Idealny do walidacji pomysłów przed inwestycją w development.",
+        "price": "od 5 000 PLN"
+      },
+      "mvp": {
+        "title": "MVP",
+        "description": "Działająca aplikacja webowa lub mobilna z podstawowymi funkcjami. Wystarczająca do startu, zdobycia użytkowników i udowodnienia konceptu.",
+        "price": "od 25 000 PLN"
+      },
+      "full": {
+        "title": "Pełny development produktu",
+        "description": "Kompletna aplikacja zbudowana do skalowania. Cena ustalana indywidualnie w zależności od zakresu.",
+        "price": "Porozmawiajmy"
+      },
+      "maintenance_note": "Po uruchomieniu: miesięczne budżety na utrzymanie i rozwój od 3 000 PLN/mies."
     },
-    "ads_detail": {
-      "title": "Google Ads",
-      "intro": "Reklamy, które trafiają do właściwych ludzi w odpowiednim momencie.",
-      "what_you_get": "Co dostajesz",
-      "features": [
-        "Strategia kampanii dopasowana do Twoich celów",
-        "Tworzenie i optymalizacja reklam tekstowych",
-        "Remarketing — docieraj do odwiedzających ponownie",
-        "Testy A/B dla maksymalnej skuteczności",
-        "Optymalizacja stawek i budżetu",
-        "Cotygodniowe raporty i miesięczne podsumowania"
+    "process": {
+      "badge": "Nasz proces",
+      "title": "Zobacz swoją nową stronę zanim zapłacisz złotówkę",
+      "subtitle": "Większość agencji zaczyna od niekończących się spotkań i ankiet. My zaczynamy inaczej. Najpierw pokazujemy, co jest możliwe.",
+      "steps": [
+        {
+          "title": "Analizujemy Twoją obecną stronę",
+          "subtitle": "Zanim jeszcze porozmawiamy",
+          "description": "Robimy głęboki przegląd Twojej obecnej strony—co działa, co nie, i jakie możliwości przegapiasz.",
+          "result": "Jasny obraz Twojego punktu startowego i potencjału."
+        },
+        {
+          "title": "Budujemy Ci podgląd",
+          "subtitle": "Tu się wyróżniamy",
+          "description": "Zanim dojdzie do rozmów odkrywczych czy szczegółowych dyskusji, tworzymy działający podgląd Twojej nowej strony. Nie płaski mockup—prawdziwy klikalny prototyp, który możesz eksplorować na telefonie lub komputerze.",
+          "result": "Prawdziwy podgląd, który możesz pokazać zespołowi, przeklikać i wyobrazić sobie jako swoją nową stronę."
+        },
+        {
+          "title": "Rozmowa odkrywcza",
+          "subtitle": "Teraz zagłębiamy się",
+          "description": "Z podglądem w ręku prowadzimy skupioną rozmowę o Twoim biznesie, celach i wizji. Powiesz nam, co Ci się podoba, co byś zmienił, i pokażesz przykłady stron, które Cię inspirują.",
+          "result": "Pewność, że naprawdę rozumiemy Twoje potrzeby."
+        },
+        {
+          "title": "Design i propozycja",
+          "subtitle": "Wszystko udokumentowane",
+          "description": "Tworzymy spójny kierunek designu na podstawie Twojego feedbacku i referencji, a potem dostarczamy jasną propozycję z zakresem, harmonogramem i ceną. Bez niespodzianek, bez ukrytych kosztów.",
+          "result": "Szczegółowa mapa drogowa i transparentna cena."
+        },
+        {
+          "title": "Budujemy",
+          "subtitle": "Profesjonalna realizacja",
+          "description": "Nasz zespół buduje Twoją stronę z nowoczesną technologią, zoptymalizowaną pod szybkość, urządzenia mobilne i wyszukiwarki. Będziesz przeglądać postępy i dawać feedback przez cały proces.",
+          "result": "Strona, która działa tak dobrze, jak wygląda."
+        },
+        {
+          "title": "Uruchomienie i wsparcie",
+          "subtitle": "Start z pewnością",
+          "description": "Zajmujemy się technicznym uruchomieniem, konfiguracją analityki i szkoleniem z zarządzania Twoją nową stroną. Plus ciągłe wsparcie, żeby wszystko działało gładko.",
+          "result": "Działająca strona i wiedza, jak ją utrzymywać."
+        }
       ],
-      "budget_note": "Do kosztu obsługi dolicz budżet reklamowy. Zalecamy minimum 2000 PLN miesięcznie."
+      "comparison": {
+        "title": "Dlaczego to podejście działa",
+        "traditional": "Tradycyjne agencje",
+        "swiftbuild": "SwiftBuild",
+        "rows": [
+          {
+            "traditional": "\"Powiedz nam, czego chcesz\"",
+            "swiftbuild": "\"Oto co dla Ciebie zbudowaliśmy\""
+          },
+          {
+            "traditional": "Tygodnie spotkań zanim zobaczysz cokolwiek",
+            "swiftbuild": "Podgląd w kilka dni"
+          },
+          {
+            "traditional": "Generyczne propozycje",
+            "swiftbuild": "Dostosowane do Twojego biznesu"
+          },
+          {
+            "traditional": "Wyobrażasz sobie rezultat",
+            "swiftbuild": "Doświadczasz rezultatu"
+          },
+          {
+            "traditional": "\"Zaufaj naszemu portfolio\"",
+            "swiftbuild": "\"Oto TWOJA strona, na żywo\""
+          }
+        ]
+      },
+      "cta": {
+        "title": "Gotowy zobaczyć, co jest możliwe?",
+        "description": "Podziel się z nami adresem swojej strony. W ciągu kilku dni dostaniesz profesjonalną analizę i klikalny podgląd nowej strony—bez żadnych zobowiązań.",
+        "button": "Otrzymaj bezpłatny podgląd"
+      }
     },
     "faq": {
       "title": "Często zadawane pytania",
       "questions": [
         {
+          "q": "Jak długo trwa cały proces?",
+          "a": "Większość projektów startuje w ciągu 3-4 tygodni od podpisania umowy. Początkowy podgląd? Zobaczysz go w kilka dni od pierwszego kontaktu."
+        },
+        {
+          "q": "Co jeśli nie spodoba mi się podgląd?",
+          "a": "Podgląd ma rozpocząć rozmowę, nie ją kończyć. Twój feedback kształtuje finalny design. Większość klientów uwielbia widzieć możliwości, których wcześniej nie wyobrażali."
+        },
+        {
           "q": "Ile kosztuje strona internetowa?",
-          "a": "Ceny zaczynają się od 8000 PLN za stronę wizytówkową. Dokładna wycena zależy od zakresu projektu — liczby podstron, funkcjonalności i integracji. Bezpłatnie wycenimy Twój projekt."
+          "a": "Strony zaczynają się od 8 000 PLN. Dokładna cena zależy od zakresu projektu—liczby podstron, funkcjonalności i integracji. Poznasz dokładną cenę przed zobowiązaniem."
         },
         {
-          "q": "Jak długo trwa budowa strony?",
-          "a": "Standardowa strona firmowa to 2-3 tygodnie od akceptacji projektu. Bardziej rozbudowane projekty mogą zająć 4-6 tygodni."
+          "q": "Jakiej technologii używacie?",
+          "a": "Budujemy z nowoczesnymi frameworkami (Next.js), które dostarczają szybkie, bezpieczne i przyjazne SEO strony. Ale nie musisz martwić się o tech—my się tym zajmujemy."
         },
         {
-          "q": "Czy mogę sam edytować stronę?",
-          "a": "Tak, dostarczamy panel administracyjny i szkolimy z jego obsługi. Będziesz mógł samodzielnie zmieniać teksty, zdjęcia i dodawać nowe treści."
+          "q": "Czy pracujecie z firmami spoza Polski?",
+          "a": "Tak! Choć specjalizujemy się w polskich MŚP, pracujemy z firmami w całej Europie. Cała komunikacja może być po angielsku lub polsku."
         },
         {
-          "q": "Kiedy zobaczę efekty SEO?",
-          "a": "Pierwsze widoczne efekty pojawiają się po 3-6 miesiącach. SEO to długoterminowa inwestycja, ale przynosi stabilne i rosnące wyniki."
+          "q": "Co jest wliczone w cenę?",
+          "a": "Wszystko: design, development, optymalizacja mobilna, podstawowe SEO, integracja analityki, wsparcie przy uruchomieniu i szkolenie. Bez ukrytych opłat."
         },
         {
-          "q": "Jaki budżet potrzebuję na Google Ads?",
-          "a": "Zalecamy minimum 2000 PLN miesięcznie na sam budżet reklamowy. Do tego dochodzi koszt obsługi. Mniejsze budżety są możliwe, ale wyniki będą proporcjonalnie mniejsze."
-        },
-        {
-          "q": "Czy podpisujecie umowy długoterminowe?",
-          "a": "Dla SEO i Google Ads zalecamy minimum 6 miesięcy współpracy, żeby zobaczyć realne efekty. Ale nie wiążemy klientów — jeśli nie jesteś zadowolony, możesz odejść z miesięcznym wypowiedzeniem."
+          "q": "Czy wymagacie długoterminowych umów?",
+          "a": "Dla usług miesięcznych (SEO, reklamy) zalecamy minimum 6 miesięcy współpracy, żeby zobaczyć realne efekty. Ale nie wiążemy Cię na siłę—możesz odejść z miesięcznym wypowiedzeniem jeśli nie jesteś zadowolony."
         }
       ]
     }

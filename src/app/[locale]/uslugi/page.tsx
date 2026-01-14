@@ -2,8 +2,9 @@ import { setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { getDictionary } from '@/lib/i18n';
 import { ServicesHero } from '@/components/sections/services-hero';
-import { ServiceDetails } from '@/components/sections/service-details';
-import { ServicesProcess } from '@/components/sections/services-process';
+import { ServicesTiers } from '@/components/sections/services-tiers';
+import { ServicesApps } from '@/components/sections/services-apps';
+import { ServicesProcessDetailed } from '@/components/sections/services-process-detailed';
 import { ServicesFaq } from '@/components/sections/services-faq';
 import { CtaBanner } from '@/components/sections/cta-banner';
 import { PageTransition } from '@/components/providers/page-transition';
@@ -31,8 +32,9 @@ export default async function ServicesPage({ params }: Props) {
   return (
     <PageTransition>
       <ServicesHero dictionary={dictionary} />
-      <ServiceDetails dictionary={dictionary} />
-      <ServicesProcess dictionary={dictionary} />
+      <ServicesTiers dictionary={dictionary} />
+      <ServicesApps dictionary={dictionary} />
+      <ServicesProcessDetailed dictionary={dictionary} />
       <ServicesFaq dictionary={dictionary} />
       <CtaBanner dictionary={dictionary} />
     </PageTransition>

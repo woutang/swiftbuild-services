@@ -34,7 +34,7 @@ export function CaseStudyNav({ dictionary, prevStudy, nextStudy }: Props) {
               <ArrowLeft className="h-5 w-5 transition-transform group-hover:-translate-x-1" />
               <div className="text-left">
                 <div className="text-xs uppercase tracking-wider opacity-60">
-                  Previous
+                  {dictionary.portfolio.prev_project}
                 </div>
                 <div className="font-medium">{prevStudy.title}</div>
               </div>

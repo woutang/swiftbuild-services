@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Layers, Zap, Users } from 'lucide-react';
+import { Zap, Sparkles, Brain, Target } from 'lucide-react';
 import type { Dictionary } from '@/types';
 
 type Props = {
@@ -11,15 +11,18 @@ type Props = {
 
 const easeOutExpo = [0.22, 1, 0.36, 1] as const;
 
-const values = [
-  { key: 'point1', icon: Layers, color: 'text-blue-500' },
-  { key: 'point2', icon: Zap, color: 'text-amber-500' },
-  { key: 'point3', icon: Users, color: 'text-emerald-500' },
+const differentiators = [
+  { key: 'speed', icon: Zap, color: 'text-amber-500', bg: 'bg-amber-500/10' },
+  { key: 'design', icon: Sparkles, color: 'text-purple-500', bg: 'bg-purple-500/10' },
+  { key: 'understanding', icon: Brain, color: 'text-blue-500', bg: 'bg-blue-500/10' },
+  { key: 'conversion', icon: Target, color: 'text-emerald-500', bg: 'bg-emerald-500/10' },
 ] as const;
 
 export function ValuesSection({ dictionary }: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const diff = dictionary.about.differentiators;
 
   return (
     <section ref={ref} className="relative py-16 md:py-24">
@@ -34,20 +37,18 @@ export function ValuesSection({ dictionary }: Props) {
           transition={{ duration: 0.6, ease: easeOutExpo }}
           className="mb-12 text-center"
         >
-          <h2 className="text-4xl font-bold md:text-5xl">
-            {dictionary.about.why_us.title}
-          </h2>
+          <h2 className="text-4xl font-bold md:text-5xl">{diff.title}</h2>
         </motion.div>
 
-        {/* Values grid */}
-        <div className="grid gap-6 md:grid-cols-3 md:gap-8">
-          {values.map((value, index) => {
-            const valueData = dictionary.about.why_us[value.key];
-            const Icon = value.icon;
+        {/* Differentiators grid */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {differentiators.map((item, index) => {
+            const data = diff[item.key];
+            const Icon = item.icon;
 
             return (
               <motion.div
-                key={value.key}
+                key={item.key}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{
@@ -55,16 +56,18 @@ export function ValuesSection({ dictionary }: Props) {
                   delay: 0.1 + index * 0.1,
                   ease: easeOutExpo,
                 }}
-                className="group rounded-2xl border border-border/50 bg-card/50 p-8 transition-colors hover:border-primary/30 hover:bg-card"
+                className="group rounded-2xl border border-border/50 bg-card/50 p-6 transition-colors hover:border-primary/30 hover:bg-card"
               >
                 <div
-                  className={`mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-background ${value.color}`}
+                  className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl ${item.bg} ${item.color}`}
                 >
-                  <Icon className="h-7 w-7" />
+                  <Icon className="h-6 w-6" />
                 </div>
 
-                <h3 className="mb-3 text-xl font-semibold">{valueData.title}</h3>
-                <p className="text-muted-foreground">{valueData.description}</p>
+                <h3 className="mb-2 text-lg font-semibold">{data.title}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {data.description}
+                </p>
               </motion.div>
             );
           })}

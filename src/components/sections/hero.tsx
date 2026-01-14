@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
@@ -36,21 +37,36 @@ const itemVariants = {
 };
 
 export function Hero({ dictionary }: Props) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  });
+
+  // Parallax transforms
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
+  const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
+  const visualY = useTransform(scrollYProgress, [0, 1], ['0%', '25%']);
+  const floatingCard1Y = useTransform(scrollYProgress, [0, 1], ['0%', '40%']);
+  const floatingCard2Y = useTransform(scrollYProgress, [0, 1], ['0%', '35%']);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
   return (
-    <section className="relative min-h-[90vh] overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 -z-10">
+    <section ref={sectionRef} className="relative min-h-[90vh] overflow-hidden">
+      {/* Background gradient with parallax */}
+      <motion.div className="absolute inset-0 -z-10" style={{ y: backgroundY }}>
         <div className="absolute bottom-0 left-1/4 h-[500px] w-[500px] rounded-full bg-primary/10 blur-[120px]" />
         <div className="absolute right-1/4 top-1/4 h-[300px] w-[300px] rounded-full bg-primary/5 blur-[100px]" />
-      </div>
+      </motion.div>
 
       <div className="mx-auto max-w-7xl px-6 md:px-12">
         <div className="grid min-h-[90vh] items-center gap-12 lg:grid-cols-2">
-          {/* Text content */}
+          {/* Text content with parallax */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="show"
+            style={{ y: contentY }}
             className="pt-12 md:pt-0"
           >
             <motion.h1
@@ -83,11 +99,12 @@ export function Hero({ dictionary }: Props) {
             </motion.div>
           </motion.div>
 
-          {/* Video/Visual area */}
+          {/* Video/Visual area with parallax */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.5, ease: easeOutExpo }}
+            style={{ y: visualY }}
             className="relative hidden lg:block"
           >
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border/50 bg-card">
@@ -106,15 +123,24 @@ export function Hero({ dictionary }: Props) {
               )}
 
               {/* Decorative elements */}
-              <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full border border-primary/20" />
-              <div className="absolute -bottom-8 -left-8 h-32 w-32 rounded-full border border-primary/10" />
+              <motion.div
+                className="absolute -right-4 -top-4 h-24 w-24 rounded-full border border-primary/20"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+              />
+              <motion.div
+                className="absolute -bottom-8 -left-8 h-32 w-32 rounded-full border border-primary/10"
+                animate={{ rotate: -360 }}
+                transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+              />
             </div>
 
-            {/* Floating stat cards */}
+            {/* Floating stat cards with enhanced parallax */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 0.5 }}
+              style={{ y: floatingCard1Y }}
               className="absolute -left-8 bottom-12 rounded-xl border border-border/50 bg-card/80 p-4 backdrop-blur-sm"
             >
               <div className="text-3xl font-bold text-primary">2-3</div>
@@ -125,6 +151,7 @@ export function Hero({ dictionary }: Props) {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.2, duration: 0.5 }}
+              style={{ y: floatingCard2Y }}
               className="absolute -right-4 top-8 rounded-xl border border-border/50 bg-card/80 p-4 backdrop-blur-sm"
             >
               <div className="text-3xl font-bold text-primary">1</div>
@@ -133,11 +160,12 @@ export function Hero({ dictionary }: Props) {
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator with fade out on scroll */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.5 }}
+          style={{ opacity }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
           <motion.div

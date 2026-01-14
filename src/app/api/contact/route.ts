@@ -1,6 +1,18 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
+// HTML escape function to prevent XSS attacks
+function escapeHtml(text: string): string {
+  const map: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;',
+  };
+  return text.replace(/[&<>"']/g, (char) => map[char] ?? char);
+}
+
 const contactSchema = z.object({
   name: z.string().min(2),
   company: z.string().optional(),
@@ -24,28 +36,30 @@ export async function POST(request: Request) {
       from: 'SwiftBuild <noreply@swiftbuild.services>',
       to: ['kontakt@swiftbuild.services'],
       replyTo: data.email,
-      subject: `Nowe zapytanie od ${data.name}${data.company ? ` (${data.company})` : ''}`,
+      subject: `Nowe zapytanie od ${escapeHtml(data.name)}${data.company ? ` (${escapeHtml(data.company)})` : ''}`,
       html: `
         <h2>Nowe zapytanie ze strony</h2>
-        <p><strong>Imię:</strong> ${data.name}</p>
-        ${data.company ? `<p><strong>Firma:</strong> ${data.company}</p>` : ''}
-        <p><strong>Email:</strong> ${data.email}</p>
-        ${data.phone ? `<p><strong>Telefon:</strong> ${data.phone}</p>` : ''}
+        <p><strong>Imię:</strong> ${escapeHtml(data.name)}</p>
+        ${data.company ? `<p><strong>Firma:</strong> ${escapeHtml(data.company)}</p>` : ''}
+        <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
+        ${data.phone ? `<p><strong>Telefon:</strong> ${escapeHtml(data.phone)}</p>` : ''}
         <p><strong>Wiadomość:</strong></p>
-        <p>${data.message.replace(/\n/g, '<br>')}</p>
+        <p>${escapeHtml(data.message).replace(/\n/g, '<br>')}</p>
       `,
     });
     */
 
-    // Mock: Log the submission (remove in production)
-    console.log('Contact form submission:', {
-      name: data.name,
-      company: data.company || 'N/A',
-      email: data.email,
-      phone: data.phone || 'N/A',
-      message: data.message.substring(0, 100) + '...',
-      timestamp: new Date().toISOString(),
-    });
+    // Log submission only in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Contact form submission:', {
+        name: data.name,
+        company: data.company || 'N/A',
+        email: data.email,
+        phone: data.phone || 'N/A',
+        message: data.message.substring(0, 100) + '...',
+        timestamp: new Date().toISOString(),
+      });
+    }
 
     return NextResponse.json(
       { success: true, message: 'Message received' },

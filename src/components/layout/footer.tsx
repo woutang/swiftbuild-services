@@ -47,6 +47,12 @@ export function Footer({ dictionary }: Props) {
                 {dictionary.nav.about}
               </Link>
               <Link
+                href="/zespol"
+                className="text-foreground transition-colors hover:text-primary"
+              >
+                {dictionary.nav.team}
+              </Link>
+              <Link
                 href="/kontakt"
                 className="text-foreground transition-colors hover:text-primary"
               >
@@ -66,14 +72,6 @@ export function Footer({ dictionary }: Props) {
                 className="transition-colors hover:text-primary"
               >
                 {dictionary.footer.email}
-              </a>
-              <a
-                href={dictionary.footer.linkedin_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors hover:text-primary"
-              >
-                {dictionary.footer.linkedin_label}
               </a>
             </div>
           </div>
